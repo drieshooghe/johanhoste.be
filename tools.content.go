@@ -6,7 +6,7 @@ import (
 	"log"
 )
 
-func getContent(jsonPath string) interface{} {
+func fetchLocalContent(jsonPath string) interface{} {
 
 	content, _ := ioutil.ReadFile(jsonPath)
 	var data interface{}

@@ -11,7 +11,7 @@ func notFoundHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	content := getContent(contentPath + "404.json")
+	content := fetchLocalContent(contentPath + "404.json")
 	err = tmpl.ExecuteTemplate(w, "base", content)
 	if err != nil {
 		log.Fatal(err)

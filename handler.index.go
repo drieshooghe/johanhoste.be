@@ -11,7 +11,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	content := getContent(contentPath + "index.json")
+	content := fetchLocalContent(contentPath + "index.json")
 	err = tmpl.ExecuteTemplate(w, "base", content)
 	if err != nil {
 		log.Fatal(err)
