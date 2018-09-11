@@ -23,4 +23,4 @@ skip_files:
 - node_modules/
 
 env_variables:
-  GITHUB_OAUTH_TOKEN: ''
+  CMS_TOKEN: ''
