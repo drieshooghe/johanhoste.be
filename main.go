@@ -7,9 +7,6 @@ import (
 	"google.golang.org/appengine"
 )
 
-const templatePath string = "./templates/"
-const contentPath string = "./content/"
-
 func init() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", indexHandler)

@@ -7,11 +7,11 @@ import (
 )
 
 func notFoundHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.New("").ParseFiles(templatePath+"base.html", templatePath+"404.html")
+	tmpl, err := template.New("").ParseFiles("templates/base.html", "templates/404.html")
 	if err != nil {
 		log.Fatal(err)
 	}
-	content := fetchLocalContent(contentPath + "404.json")
+	content := fetchLocalContent("404.json")
 	err = tmpl.ExecuteTemplate(w, "base", content)
 	if err != nil {
 		log.Fatal(err)

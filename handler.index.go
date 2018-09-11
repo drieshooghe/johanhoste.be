@@ -7,11 +7,11 @@ import (
 )
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.New("").ParseFiles(templatePath+"base.html", templatePath+"home/index.html")
+	tmpl, err := template.New("").ParseFiles("templates/base.html", "templates/index.html")
 	if err != nil {
 		log.Fatal(err)
 	}
-	content := fetchLocalContent(contentPath + "index.json")
+	content := fetchRemoteContent(r)
 	err = tmpl.ExecuteTemplate(w, "base", content)
 	if err != nil {
 		log.Fatal(err)
