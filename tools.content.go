@@ -11,8 +11,6 @@ import (
 	"google.golang.org/appengine/urlfetch"
 )
 
-const remoteContentPath string = "http://api.johanhoste.be/api/collections/get/page?token="
-
 func fetchLocalContent(jsonPath string) interface{} {
 
 	content, _ := ioutil.ReadFile(jsonPath)
