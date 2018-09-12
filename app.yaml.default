@@ -23,4 +23,5 @@ skip_files:
 - node_modules/
 
 env_variables:
-  CMS_TOKEN: ''
+  API_HOST: ''
+  API_TOKEN: ''
