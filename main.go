@@ -10,7 +10,6 @@ import (
 func init() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", indexHandler)
-	r.NotFoundHandler = http.HandlerFunc(notFoundHandler)
 	http.Handle("/", r)
 }
 
