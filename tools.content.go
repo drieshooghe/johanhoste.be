@@ -28,7 +28,7 @@ type httpResponse struct {
 	body   interface{}
 }
 
-type ApiData struct {
+type apiData struct {
 	Meta    interface{}
 	Content interface{}
 }
@@ -44,7 +44,7 @@ func fetchRemoteContent(r *http.Request) interface{} {
 	go makeGetRequest(r, metaURL, mChan)
 	go makeGetRequest(r, contentURL, cChan)
 
-	var Data = ApiData{
+	var Data = apiData{
 		Meta:    (<-mChan).body,
 		Content: (<-cChan).body,
 	}

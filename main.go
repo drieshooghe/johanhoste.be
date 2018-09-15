@@ -8,9 +8,21 @@ import (
 )
 
 func init() {
+
+	const entrypoint string = "index.html"
+	const staticDir string = "static"
+
 	r := mux.NewRouter()
-	r.HandleFunc("/", indexHandler)
+
+	// Serve static files directly.
+	r.PathPrefix("/dist").Handler(http.FileServer(http.Dir(staticDir)))
+
+	// Handle all routes with indexhandler.
+	r.HandleFunc("/", IndexHandler(entrypoint))
+
+	// Spin up server.
 	http.Handle("/", r)
+
 }
 
 func main() {
