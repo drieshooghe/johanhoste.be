@@ -9,9 +9,9 @@ import (
 
 // Custom template functions
 var customTmplFuncs = template.FuncMap{
-	"jsonify": func(v interface{}) template.JS {
-		a, _ := json.Marshal(v)
-		return template.JS(a)
+	"objectify": func(v interface{}, n string) template.JS {
+		varValue, _ := json.Marshal(v)
+		return `let ` + template.JS(n) + ` = ` + template.JS(varValue) + `;`
 	},
 }
 
