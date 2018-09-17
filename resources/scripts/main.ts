@@ -2,8 +2,11 @@ import Vue from "vue";
 import HelloComponent from "./components/Hello.vue";
 import HelloDecoratorComponent from "./components/HelloDecorator.vue";
 
+console.log('test');
+
 let v = new Vue({
     el: "#app",
+    delimiters: ['${', '}'],
     template: `
     <div>
         Name: <input v-model="name" type="text">
