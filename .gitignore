@@ -1,3 +1,9 @@
+# Javascript dependencies
+node_modules/
+
+# Static files
+static/
+
 # Binaries for programs and plugins
 *.exe
 *.exe~

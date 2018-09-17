@@ -9,14 +9,14 @@
     <title>{{.Meta.title}}</title>
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,600" rel="stylesheet">
     <link rel="stylesheet" href="static/main.css">
-    <script src="static/main.js"></script>
     <script type="text/javascript">
-        {{ objectify .Content "content"}}
+        { { objectify.Content`content` } }
     </script>
+    <script src="static/main.js"></script>
 </head>
 
-<body class="bg-grey-light text-black">
-
+<body>
+    <div id="app"></div>
 </body>
 
 </html>

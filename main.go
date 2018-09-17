@@ -15,7 +15,7 @@ func init() {
 	r := mux.NewRouter()
 
 	// Serve static files directly.
-	r.PathPrefix("/dist").Handler(http.FileServer(http.Dir(staticDir)))
+	r.PathPrefix("/static").Handler(http.FileServer(http.Dir(staticDir)))
 
 	// Handle all routes with indexhandler.
 	r.HandleFunc("/", IndexHandler(entrypoint))
