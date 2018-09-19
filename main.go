@@ -10,12 +10,12 @@ import (
 func init() {
 
 	const entrypoint string = "index.html"
-	const staticDir string = "static"
+	const staticDir string = "dist"
 
 	r := mux.NewRouter()
 
 	// Serve static files directly.
-	r.PathPrefix("/static").Handler(http.FileServer(http.Dir(staticDir)))
+	r.PathPrefix("/dist").Handler(http.FileServer(http.Dir(staticDir)))
 
 	// Handle all routes with indexhandler.
 	r.HandleFunc("/", IndexHandler(entrypoint))
