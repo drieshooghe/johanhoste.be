@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-    entry: './resources/scripts/main.ts',
+    entry: './src/scripts/main.ts',
     output: {
         path: path.resolve(__dirname, './static'),
         publicPath: '/static/',
