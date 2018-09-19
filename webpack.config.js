@@ -4,8 +4,8 @@ var webpack = require('webpack')
 module.exports = {
     entry: './src/scripts/main.ts',
     output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/',
+        path: path.resolve(__dirname, './static'),
+        publicPath: '/static/',
         filename: 'main.js'
     },
     module: {
@@ -38,13 +38,19 @@ module.exports = {
                 options: {
                     name: '[name].[ext]?[hash]'
                 }
-            }
+            },
+            {
+                test: /\.scss$/,
+                loaders: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
+                include: path.resolve(__dirname, './src')
+            },
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js', '.vue', '.json'],
+        extensions: ['.ts', '.js', '.vue', '.json', '.scss'],
         alias: {
-            'vue$': 'vue/dist/vue.esm.js'
+            'vue$': 'vue/dist/vue.esm.js',
+            '@': path.resolve(__dirname, './src'),
         }
     },
     devServer: {

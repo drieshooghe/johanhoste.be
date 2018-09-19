@@ -1,9 +1,8 @@
 import Vue from "vue";
+import App from "./App.vue";
 
 let v = new Vue({
     el: "#app",
     delimiters: ['${', '}'],
-    template: `
-        <h1 class="bg-grey">Johan in de huis!</h1>
-    `
+    render: h => h(App)
 });
