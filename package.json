@@ -13,6 +13,7 @@
   "homepage": "https://github.com/drieshooghe/johanhoste.be",
   "scripts": {
     "go": "dev_appserver.py app.yaml",
+    "build": "webpack",
     "dev": "gulp build:dev",
     "dev:watch": "gulp build:watch",
     "dev:serve": "npm run go | npm run dev:watch",

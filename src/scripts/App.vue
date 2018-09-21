@@ -1,5 +1,15 @@
 <template>
-  <div id="app" class="bg-grey">
-    <h1>Johan in de huis!</h1>
+  <div id="app">
+    <home></home>
   </div>
 </template>
+
+<script>
+import Home from './components/home'
+export default {
+  name: 'app',
+  components: {
+    Home
+  }
+}
+</script>
