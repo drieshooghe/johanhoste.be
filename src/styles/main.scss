@@ -1,7 +1,6 @@
 @tailwind preflight;
-@tailwind components;
-@tailwind utilities;
 
-#app{
-    font-weight: 400;
-}
+// @tailwindcss components;
+@import "components/buttons";
+
+@tailwind utilities;

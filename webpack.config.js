@@ -38,16 +38,11 @@ module.exports = {
                 options: {
                     name: '[name].[ext]?[hash]'
                 }
-            },
-            {
-                test: /\.scss$/,
-                loaders: ['postcss-loader', 'style-loader', 'css-loader', 'sass-loader'],
-                include: path.resolve(__dirname, './src')
-            },
+            }
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js', '.vue', '.json', '.scss'],
+        extensions: ['.ts', '.js', '.vue', '.json'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': path.resolve(__dirname, './src'),
