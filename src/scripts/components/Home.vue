@@ -3,6 +3,7 @@
 </template>
 
 <script>
+    console.log(content.entries);
     export default{
         name: 'home'
     }

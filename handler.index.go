@@ -11,7 +11,7 @@ import (
 var customTmplFuncs = template.FuncMap{
 	"objectify": func(v interface{}, n string) template.JS {
 		varValue, _ := json.Marshal(v)
-		return `let ` + template.JS(n) + ` = ` + template.JS(varValue) + `;`
+		return `const ` + template.JS(n) + ` = ` + template.JS(varValue) + `;`
 	},
 }
 
