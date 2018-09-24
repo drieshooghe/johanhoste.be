@@ -18,7 +18,7 @@ func init() {
 	r.PathPrefix("/static").Handler(http.FileServer(http.Dir(staticDir)))
 
 	// Handle all routes with indexhandler.
-	r.HandleFunc("/", IndexHandler(entrypoint))
+	r.PathPrefix("/").HandlerFunc(IndexHandler(entrypoint))
 
 	// Spin up server.
 	http.Handle("/", r)
