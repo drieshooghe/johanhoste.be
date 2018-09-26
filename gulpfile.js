@@ -65,8 +65,7 @@ gulp.task('build:watch', function () {
     browsersync.init({
         proxy: 'http://localhost:8080'
     });
-    gulp.watch('src/scripts/**/*.+(js|ts|vue)', ['js']).on('change', browsersync.reload);
-    gulp.watch('src/styles/**/*.scss', ['css']).on('change', browsersync.reload);
+    gulp.watch('src/**/*.+(js|ts|vue|scss|js|css)', ['js', 'css']).on('change', browsersync.reload);
 });
 
 // Production tasks

@@ -1,5 +1,13 @@
-.c-btn{
-    .c-btn__label{
-        background-color: green;
+.navbtn{
+    @apply inline-block py-4 px-4 text-white;
+
+    .navbtn-label{
+        @apply block border-b border-transparent py-2;
+    }
+
+    &:hover{
+        .navbtn-label{
+            @apply border-grey-lighter;
+        }
     }
 }

@@ -8,26 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{.General.metatitle}}</title>
     <meta name="description" content="{{.General.metadescription}}">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="static/main.css">
     <script type="text/javascript">
-        {{objectify .Content `content`}}
+        {{ objectify .Content `apiPageContent` }}
+        {{ objectify .General `apiGeneralContent` }}
     </script>
 </head>
 
 <body>
-    <div id="app">
-        <h1>Hello App!</h1>
-        <p>
-            <!-- use router-link component for navigation. -->
-            <!-- specify the link by passing the `to` prop. -->
-            <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
-            <router-link to="/foo">Go to Foo</router-link>
-            <router-link to="/bar">Go to Bar</router-link>
-        </p>
-        <!-- route outlet -->
-        <!-- component matched by the route will render here -->
-        <router-view></router-view>
-    </div>
+    <div id="app"></div>
     <script src="static/main.js"></script>
 </body>
 
