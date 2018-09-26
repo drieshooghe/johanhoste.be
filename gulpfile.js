@@ -7,7 +7,7 @@ const cssnano = require('cssnano');
 const webpack_stream = require('webpack-stream')
 const webpack = require('webpack');
 const webpack_config = require('./webpack.config.js');
-
+const browsersync = require("browser-sync").create();
 
 
 // -------------- TASKS --------------
@@ -62,8 +62,11 @@ gulp.task('build:dev', function () {
 });
 
 gulp.task('build:watch', function () {
-    gulp.watch('src/scripts/**/*.+(js|ts|vue)', ['js']);
-    gulp.watch('src/styles/**/*.scss', ['css']);
+    browsersync.init({
+        proxy: 'http://localhost:8080'
+    });
+    gulp.watch('src/scripts/**/*.+(js|ts|vue)', ['js']).on('change', browsersync.reload);
+    gulp.watch('src/styles/**/*.scss', ['css']).on('change', browsersync.reload);
 });
 
 // Production tasks
