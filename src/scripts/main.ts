@@ -12,13 +12,12 @@ import Contact from './components/Contact.vue';
 
 Vue.use(Router);
 
-declare var apiPageContent: any;
-declare var apiGeneralContent: any;
-const pageContent = new ContentHelper.Page(apiPageContent);
-const generalContent = new ContentHelper.General(apiGeneralContent);
-console.log('Check out Vuex to store the following variables');
-console.log(pageContent);
-console.log(generalContent);
+declare var pageContent: any;
+declare var generalContent: any;
+const Pages = new ContentHelper.Page(pageContent);
+const GeneralInfo = new ContentHelper.General(generalContent);
+console.log(Pages);
+console.log(GeneralInfo);
 
 const routes = [
     { path: '/', component: Home },
