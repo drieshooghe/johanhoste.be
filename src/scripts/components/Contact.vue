@@ -2,17 +2,20 @@
     <div id="contact">
       <Header></Header>
       <div class="container">
-        <h1>Contact</h1>
+        <PageTitle></PageTitle>
       </div>
     </div>
 </template>
 
 <script>
-import Header from "./Header.vue";
+import Header from "./partials/Header.vue";
+import PageTitle from "./partials/PageTitle.vue";
+
 export default {
   name: "contact",
   components: {
-    Header
+    Header,
+    PageTitle
   }
 };
 </script>

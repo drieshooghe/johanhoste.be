@@ -1,16 +1,19 @@
 <template>
     <div id="home" class="container">
-      <h1>Johan Hoste</h1>
+      <PageTitle></PageTitle>
       <Navigation></Navigation>
+      <div>{{$store.getters.getPageContent(this.$options.name)}}</div>
     </div>
 </template>
 
 <script>
-import Navigation from "./HomeNav.vue";
+import Navigation from "./partials/HomeNav.vue";
+import PageTitle from "./partials/PageTitle.vue";
 export default {
   name: "home",
   components: {
-    Navigation
+    Navigation,
+    PageTitle
   }
 };
 </script>

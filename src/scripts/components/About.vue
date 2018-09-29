@@ -2,17 +2,20 @@
     <div id="about">
       <Header></Header>
       <div class="container">
-        <h1>Over mij</h1>
+        <PageTitle></PageTitle>
       </div>
     </div>
 </template>
 
 <script>
-import Header from "./Header.vue";
+import Header from "./partials/Header.vue";
+import PageTitle from "./partials/PageTitle.vue";
+
 export default {
   name: "about",
   components: {
-    Header
+    Header,
+    PageTitle
   }
 };
 </script>

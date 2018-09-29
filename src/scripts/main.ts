@@ -1,8 +1,9 @@
 import Vue from 'vue';
+import Vuex from 'vuex';
 import App from './App.vue';
 import Router from 'vue-router';
 
-import * as ContentHelper from './helpers/content';
+import * as PH from './helpers/PageHelpers';
 
 import Home from './components/Home.vue';
 import Services from './components/Services.vue';
@@ -10,14 +11,28 @@ import Testimonials from './components/Testimonials.vue';
 import About from './components/About.vue';
 import Contact from './components/Contact.vue';
 
+Vue.use(Vuex);
 Vue.use(Router);
 
-declare var pageContent: any;
-declare var generalContent: any;
-const Pages = new ContentHelper.Page(pageContent);
-const GeneralInfo = new ContentHelper.General(generalContent);
-console.log(Pages);
-console.log(GeneralInfo);
+declare var pageData: any;
+// declare var infoData: any;
+
+const pageCollection = new PH.PageCollection(pageData);
+
+const store = new Vuex.Store({
+    state: {
+        pages: pageCollection
+        // info: new Info(generalContent)
+    },
+    getters: {
+        getPageTitle: (state) => (handle: string) => {
+            return state.pages.getPage(handle).getTitle();
+        },
+        getPageContent: (state) => (handle: string) => {
+            return state.pages.getPage(handle).getContent();
+        }
+    }
+})
 
 const routes = [
     { path: '/', component: Home },
@@ -34,7 +49,8 @@ const router = new Router({
 
 let v = new Vue({
     el: "#app",
+    store,
     router,
     template: '<App/>',
     components: { App }
-}).$mount('#app');
+});
