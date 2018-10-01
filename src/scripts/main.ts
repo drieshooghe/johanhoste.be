@@ -15,14 +15,13 @@ Vue.use(Vuex);
 Vue.use(Router);
 
 declare var pageData: any;
-// declare var infoData: any;
+declare var infoData: any;
 
 const pageCollection = new PH.PageCollection(pageData);
-
 const store = new Vuex.Store({
     state: {
-        pages: pageCollection
-        // info: new Info(generalContent)
+        pages: pageCollection,
+        info: new PH.Info(infoData)
     },
     getters: {
         getPageTitle: (state) => (handle: string) => {
@@ -30,6 +29,12 @@ const store = new Vuex.Store({
         },
         getPageContent: (state) => (handle: string) => {
             return state.pages.getPage(handle).getContent();
+        },
+        getMetaInfo: (state) => (handle: string) => {
+            return state.info.getMetaInfo(handle);
+        },
+        getContactInfo: (state) => (handle: string) => {
+            return state.info.getContactInfo(handle);
         }
     }
 })

@@ -24,16 +24,13 @@ export class PageCollection {
         let results: any = [];
         Object.keys(pageData).forEach((key) => {
             if (key.indexOf('_') > 1) {
-                console.log(key)
                 let prefix = key.split('_')[0];
                 let type = key.split('_')[1];
                 if (results[prefix] == undefined) { results[prefix] = [] };
                 results[prefix][type] = pageData[key].toString();
             }
         });
-        console.log(results);
         for (let i in results) {
-            console.log(results[i]);
             this.collection.push(new Page(results[i]));
         }
     }
@@ -46,6 +43,34 @@ export class PageCollection {
             if (p.getHandle() == handle) {
                 return p;
             }
+        }
+    }
+}
+
+export class Info {
+    meta: { 'title': string, 'description': string }[] = [];
+    contact: { 'street': string, 'no': number, 'zipcode': number, 'place': string, 'phonenumber': string, 'email': string, 'vatcode': string }[] = []
+    constructor(data: any) {
+        this.meta = [{ 'title': data.metatitle || '', 'description': data.metadescription || '' }];
+        this.contact = [{
+            'street': data.street || '',
+            'no': data.no || '',
+            'zipcode': data.zipcode || '',
+            'place': data.place || '',
+            'phonenumber': data.phoneno || '',
+            'email': data.email || '',
+            'vatcode': data.vat || ''
+        }]
+    }
+    getMetaInfo(handle: string) {
+        Object.keys(this.meta);
+    }
+    getContactInfo(handle: string) {
+        for (let value of this.contact) {
+            console.log(value)
+            // if (this.contact.hasOwnProperty(key) && key == handle) {
+            //     this.meta[key];
+            // }
         }
     }
 }

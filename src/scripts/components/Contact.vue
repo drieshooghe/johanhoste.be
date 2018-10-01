@@ -3,6 +3,7 @@
       <Header></Header>
       <div class="container">
         <PageTitle></PageTitle>
+        <div>{{$store.getters.getContactInfo('street')}}</div>
       </div>
     </div>
 </template>
