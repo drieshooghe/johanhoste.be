@@ -3,7 +3,7 @@
       <Header></Header>
       <div class="container">
         <PageTitle></PageTitle>
-        <div>{{$store.getters.getContactInfo('street')}}</div>
+        <div><span>{{$store.getters.getContactInfo('street')}}</span>&nbsp;<span>{{$store.getters.getContactInfo('no')}}</span></div>
       </div>
     </div>
 </template>

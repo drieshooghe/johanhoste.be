@@ -48,8 +48,8 @@ export class PageCollection {
 }
 
 export class Info {
-    meta: { 'title': string, 'description': string }[] = [];
-    contact: { 'street': string, 'no': number, 'zipcode': number, 'place': string, 'phonenumber': string, 'email': string, 'vatcode': string }[] = []
+    meta: any = { 'title': '', 'description': '' };
+    contact: any = { 'street': '', 'no': 0, 'zipcode': 0, 'place': '', 'phonenumber': '', 'email': '', 'vatcode': '' }
     constructor(data: any) {
         this.meta = [{ 'title': data.metatitle || '', 'description': data.metadescription || '' }];
         this.contact = [{
@@ -62,15 +62,10 @@ export class Info {
             'vatcode': data.vat || ''
         }]
     }
-    getMetaInfo(handle: string) {
-        Object.keys(this.meta);
+    getMetaInfo(handle: any) {
+        return this.meta[0][handle];
     }
-    getContactInfo(handle: string) {
-        for (let value of this.contact) {
-            console.log(value)
-            // if (this.contact.hasOwnProperty(key) && key == handle) {
-            //     this.meta[key];
-            // }
-        }
+    getContactInfo(handle: any) {
+        return this.contact[0][handle];
     }
 }

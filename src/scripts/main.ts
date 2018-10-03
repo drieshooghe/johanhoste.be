@@ -30,10 +30,10 @@ const store = new Vuex.Store({
         getPageContent: (state) => (handle: string) => {
             return state.pages.getPage(handle).getContent();
         },
-        getMetaInfo: (state) => (handle: string) => {
+        getMetaInfo: (state) => (handle: any) => {
             return state.info.getMetaInfo(handle);
         },
-        getContactInfo: (state) => (handle: string) => {
+        getContactInfo: (state) => (handle: any) => {
             return state.info.getContactInfo(handle);
         }
     }
