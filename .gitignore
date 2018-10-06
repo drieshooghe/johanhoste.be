@@ -20,4 +20,4 @@ app.yaml
 johanhoste.code-workspace
 
 # Logs
-yarn.error.log
+yarn-error.log

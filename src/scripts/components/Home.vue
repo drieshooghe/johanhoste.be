@@ -1,5 +1,5 @@
 <template>
-    <div id="home" class="container bg-red">
+    <div id="home" class="bg-red absolute">
       <PageTitle></PageTitle>
       <Navigation></Navigation>
       <div>{{$store.getters.getPageContent(this.$options.name)}}</div>

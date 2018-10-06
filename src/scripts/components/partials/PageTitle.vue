@@ -1,3 +1,3 @@
 <template>
-    <h1>{{$store.getters.getPageTitle(this.$parent.$options.name)}}</h1>
+    <h1 style="line-height: 4rem;">{{$store.getters.getPageTitle(this.$parent.$options.name)}}</h1>
 </template>

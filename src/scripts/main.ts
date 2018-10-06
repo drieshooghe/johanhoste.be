@@ -40,11 +40,11 @@ const store = new Vuex.Store({
 })
 
 const routes = [
-    { path: '/', component: Home },
-    { path: '/diensten', component: Services },
-    { path: '/getuigenissen', component: Testimonials },
-    { path: '/over-mij', component: About },
-    { path: '/contact', component: Contact },
+    { path: '/', name: 'home', component: Home },
+    { path: '/diensten', name: 'services', component: Services },
+    { path: '/getuigenissen', name: 'testimonials', component: Testimonials },
+    { path: '/over-mij', name: 'about', component: About },
+    { path: '/contact', name: 'contact', component: Contact },
 ];
 
 const router = new Router({
