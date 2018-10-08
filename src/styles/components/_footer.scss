@@ -1,15 +1,38 @@
 .footer{
-    @apply flex pt-2 mb-1 text-sm;
+    $c: &;
+
+    @apply flex pt-2 mb-1 text-white justify-between;
+    transition: all 0.8s ease-in-out;
 
     &__col{
-        @apply w-1/3;
+        @apply inline-block;
+        transition: all 0.8s ease-in-out;
     }
 
-    &__link{
-
+    &__col-separator{
+        @apply block bg-white mt-1 mb-2;
+        width: 1px;
     }
 
-    &__label{
+    &__link, &__label{
+        @apply text-white;
+    }
+
+    &--home{
+        @apply text-grey justify-around;
+        transition: all 0.8s ease-in-out;
+
+        #{$c}__col-separator{
+            @apply bg-grey;
+        }
+            
+        #{$c}__link{
+            @apply text-grey;
+        }
+    
+        #{$c}__label{
+            @apply text-grey;
+        }
 
     }
 }
