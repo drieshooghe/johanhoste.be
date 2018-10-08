@@ -852,7 +852,7 @@ module.exports = {
   plugins: [
     require('tailwindcss/plugins/container')({
       center: true,
-      padding: '1.5rem',
+      padding: '3rem',
     }),
   ],
 

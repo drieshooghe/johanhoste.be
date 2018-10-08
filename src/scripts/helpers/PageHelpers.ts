@@ -49,17 +49,18 @@ export class PageCollection {
 
 export class Info {
     meta: any = { 'title': '', 'description': '' };
-    contact: any = { 'street': '', 'no': 0, 'zipcode': 0, 'place': '', 'phonenumber': '', 'email': '', 'vatcode': '' }
+    contact: any = { 'name': '', 'street': '', 'no': 0, 'zipcode': 0, 'place': '', 'phonenumber': '', 'email': '', 'vatcode': '' }
     constructor(data: any) {
         this.meta = [{ 'title': data.metatitle || '', 'description': data.metadescription || '' }];
         this.contact = [{
+            'name': data.name || '',
             'street': data.street || '',
             'no': data.no || '',
             'zipcode': data.zipcode || '',
             'place': data.place || '',
             'phonenumber': data.phoneno || '',
             'email': data.email || '',
-            'vatcode': data.vat || ''
+            'vatcode': data.vatno || ''
         }]
     }
     getMetaInfo(handle: any) {

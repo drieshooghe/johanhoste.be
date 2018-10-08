@@ -1,6 +1,7 @@
 <template>
     <div id="about" class="block absolute">
       <PageTitle></PageTitle>
+      <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
     </div>
 </template>
 

@@ -1,9 +1,14 @@
 @import "settings/preflight.css";
 @import "generic/a";
+@import "generic/p";
+@import "generic/headings";
+@import "generic/tables";
+@import "generic/lists";
 
 @import "settings/components.css";
 @import "components/link";
 @import "components/buttons";
+@import "components/footer";
 
 #home{
     background-image: url('img/home-background.jpg');

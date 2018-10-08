@@ -1,0 +1,15 @@
+.footer{
+    @apply flex pt-2 mb-1 text-sm;
+
+    &__col{
+        @apply w-1/3;
+    }
+
+    &__link{
+
+    }
+
+    &__label{
+
+    }
+}
