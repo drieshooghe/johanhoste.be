@@ -1,5 +1,5 @@
 <template>
-    <div id="contact" class="block absolute">
+    <div id="contact" class="block absolute container pt-6 lg:pt-12">
       <PageTitle></PageTitle>
       <div class="mb-4 font-black"><h3>{{$store.getters.getContactInfo('name')}}</h3></div>
       <a href="" class="link mb-4">

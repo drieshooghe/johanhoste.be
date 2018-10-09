@@ -1,5 +1,5 @@
 <template>
-    <div id="testimonials" class="block absolute">
+    <div id="testimonials" class="block absolute container pt-6 lg:pt-12">
       <PageTitle></PageTitle>
     </div>
 </template>
