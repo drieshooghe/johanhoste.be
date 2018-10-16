@@ -1,5 +1,5 @@
 <template>
-    <div id="services" class="block absolute container pt-6 lg:pt-12">
+    <div id="services" class="block container absolute">
       <PageTitle></PageTitle>
       <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
     </div>
