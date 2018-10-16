@@ -1,16 +1,22 @@
 <template>
-    <div id="testimonials" class="block absolute container pt-6 lg:pt-12">
-      <PageTitle></PageTitle>
+    <div id="testimonials" class="block">
+      <Header></Header>
+      <div class="container">
+        <PageTitle></PageTitle>
+        <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
+      </div>
     </div>
 </template>
 
 <script>
 import PageTitle from "./partials/PageTitle.vue";
+import Header from "./partials/Header.vue";
 
 export default {
   name: "testimonials",
   components: {
-    PageTitle
+    PageTitle,
+    Header
   }
 };
 </script>

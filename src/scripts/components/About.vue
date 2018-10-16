@@ -1,17 +1,24 @@
 <template>
-    <div id="about" class="block absolute container pt-6 lg:pt-12">
-      <PageTitle></PageTitle>
-      <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
+    <div id="about" class="block">
+      <Header></Header>
+      <transition name="router-anim" enter-active-class="slide-in" leave-active-class="slide-out">
+        <div class="container">
+          <PageTitle></PageTitle>
+          <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
+        </div>
+      </transition>
     </div>
 </template>
 
 <script>
 import PageTitle from "./partials/PageTitle.vue";
+import Header from "./partials/Header.vue";
 
 export default {
   name: "about",
   components: {
-    PageTitle
+    PageTitle,
+    Header
   }
 };
 </script>

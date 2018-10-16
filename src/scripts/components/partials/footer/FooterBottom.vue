@@ -7,11 +7,11 @@
           </div>
 
           <div class="py-1 w-full md:w-1/3 trans">
-            <a href="/disclaimer" class="link">
+            <router-link :to="{ name: 'disclaimer' }" class="link">
               <span class="text-white">
                 <span class="link__label link__label--dark">Disclaimer</span>
               </span>
-            </a>
+            </router-link>
           </div>
 
           <div class="py-1 w-full md:w-1/3 trans">

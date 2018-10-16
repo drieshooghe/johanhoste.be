@@ -10,6 +10,7 @@ import Services from './components/Services.vue';
 import Testimonials from './components/Testimonials.vue';
 import About from './components/About.vue';
 import Contact from './components/Contact.vue';
+import Disclaimer from './components/Disclaimer.vue';
 
 Vue.use(Vuex);
 Vue.use(Router);
@@ -45,6 +46,7 @@ const routes = [
     { path: '/getuigenissen', name: 'testimonials', component: Testimonials },
     { path: '/over-mij', name: 'about', component: About },
     { path: '/contact', name: 'contact', component: Contact },
+    { path: '/disclaimer', name: 'disclaimer', component: Disclaimer },
 ];
 
 const router = new Router({

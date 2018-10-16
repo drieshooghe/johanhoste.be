@@ -6,7 +6,6 @@
         <Navigation></Navigation>
         <div>{{$store.getters.getPageContent(this.$options.name)}}</div>
       </div>
-      <Footer></Footer>
     </div>
 </template>
 
