@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="font-sans bg-white w-screen max-w-full">
     <div class="min-h-screen">
-      <router-view/>
+      <transition>
+        <router-view/>
+      </transition>
     </div>
     <Footer></Footer>
   </div>

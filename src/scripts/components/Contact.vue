@@ -1,8 +1,8 @@
 <template>
     <div id="contact" class="block">
       <Header></Header>
-      <transition name="router-anim" enter-active-class="slide-in" leave-active-class="slide-out">
-      <div class="container">
+      <transition name="contact-anim" enter-active-class="slide-in" leave-active-class="slide-out">
+      <div class="block container">
         <PageTitle></PageTitle>
         <div class="mb-4 font-black"><h3>{{$store.getters.getContactInfo('name')}}</h3></div>
         <a href="" class="link mb-4">

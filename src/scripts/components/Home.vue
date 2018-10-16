@@ -12,13 +12,12 @@
 <script>
 import Navigation from "./partials/HomeNav.vue";
 import HomePageTitle from "./partials/HomePageTitle.vue";
-import Footer from "./partials/Footer.vue";
+
 export default {
   name: "home",
   components: {
     Navigation,
-    HomePageTitle,
-    Footer
+    HomePageTitle
   }
 };
 </script>

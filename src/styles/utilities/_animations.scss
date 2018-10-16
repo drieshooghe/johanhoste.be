@@ -1,11 +1,19 @@
   @keyframes slide-in { 
-    0% { top: -100%; }
-    100% { top: 0; }
+    0% { 
+      transform: translateY(-100vh); 
+    }
+    100% { 
+      transform: translateY(0vh); 
+     }
   }
   
   @keyframes slide-out { 
-    0% { top: 0; }
-    100% { top: 100%; }
+    0% { 
+      transform: translateY(0vh); 
+     }
+    100% { 
+      transform: translateY(100vh); 
+     }
   }
 
   .slide-in { 
