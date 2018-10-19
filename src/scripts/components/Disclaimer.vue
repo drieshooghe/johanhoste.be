@@ -1,24 +1,17 @@
 <template>
-    <div id="disclaimer" class="block">
-      <Header></Header>
-      <transition name="disclaimer-anim" enter-active-class="slide-in" leave-active-class="slide-out">
-        <div class="block container">
-            <PageTitle></PageTitle>
-            <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
-        </div>
-      </transition>
+    <div id="disclaimer" class="container scroll-content">
+      <PageTitle></PageTitle>
+      <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
     </div>
 </template>
 
 <script>
 import PageTitle from "./partials/PageTitle.vue";
-import Header from "./partials/Header.vue";
 
 export default {
   name: "disclaimer",
   components: {
-    PageTitle,
-    Header
+    PageTitle
   }
 };
 </script>

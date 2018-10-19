@@ -1,24 +1,50 @@
-  @keyframes slide-in { 
+  @keyframes scrollIn { 
     0% { 
+      opacity: 0;
       transform: translateY(-100vh); 
     }
-    100% { 
+    20% {
+      opacity: 0;
+    }
+    80%{
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
       transform: translateY(0vh); 
      }
   }
   
-  @keyframes slide-out { 
+  @keyframes scrollOut { 
     0% { 
+      opacity: 1;
       transform: translateY(0vh); 
      }
+     20% {
+       opacity: 1;
+     }
+     80%{
+       opacity: 1;
+     }
     100% { 
+      opacity: 0;
       transform: translateY(100vh); 
      }
   }
 
-  .slide-in { 
-    animation: slide-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  .scroll-container{
+    @apply flex-grow relative;
   }
-  .slide-out { 
-    animation: slide-out 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  .scroll-content{
+    @apply block;
+  }
+
+  .scroll-enter-active{ 
+    @apply absolute pin-x;
+    animation: scrollIn .8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  .scroll-leave-active{ 
+    @apply absolute pin-x;
+    animation: scrollOut .8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }

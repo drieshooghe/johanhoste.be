@@ -1,24 +1,21 @@
 <template>
-    <div id="about" class="block">
-      <Header></Header>
-      <transition name="about-anim" enter-active-class="slide-in" leave-active-class="slide-out">
-        <div class="block container">
+    <div id="about" class="container scroll-content">
           <PageTitle></PageTitle>
           <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
-        </div>
-      </transition>
+          <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
+          <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
+          <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
+          <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
     </div>
 </template>
 
 <script>
 import PageTitle from "./partials/PageTitle.vue";
-import Header from "./partials/Header.vue";
 
 export default {
   name: "about",
   components: {
-    PageTitle,
-    Header
+    PageTitle
   }
 };
 </script>

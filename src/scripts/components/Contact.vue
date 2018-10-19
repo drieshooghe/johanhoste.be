@@ -1,8 +1,5 @@
 <template>
-    <div id="contact" class="block">
-      <Header></Header>
-      <transition name="contact-anim" enter-active-class="slide-in" leave-active-class="slide-out">
-      <div class="block container">
+    <div id="contact" class="container scroll-content">
         <PageTitle></PageTitle>
         <div class="mb-4 font-black"><h3>{{$store.getters.getContactInfo('name')}}</h3></div>
         <a href="" class="link mb-4">
@@ -16,20 +13,16 @@
           <div class="link__label mb-2 text-black">{{$store.getters.getContactInfo('email')}}</div>
         </a>
         <div>BTW&nbsp;{{$store.getters.getContactInfo('vatcode')}}</div>
-      </div>
-      </transition>
     </div>
 </template>
 
 <script>
 import PageTitle from "./partials/PageTitle.vue";
-import Header from "./partials/Header.vue";
 
 export default {
   name: "contact",
   components: {
-    PageTitle,
-    Header
+    PageTitle
   },
   filters: {
     phoneLink: value => {

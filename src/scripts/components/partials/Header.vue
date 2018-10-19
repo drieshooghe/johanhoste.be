@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-green font-white py-3 lg:py-6">
+    <header class="bg-green font-white py-3 lg:py-6 scroll-header">
       <div class="container flex justify-between">
         <router-link :to="{ name: 'home' }"><div class="py-1"><img src="static/img/header_logo.svg" class="h-16"/></div></router-link>
         <nav class="flex">
