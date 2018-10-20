@@ -2,7 +2,7 @@
     @apply inline-block py-4 px-4 text-white;
 
     .navbtn-label{
-        @apply block border-b border-transparent py-2;
+        @apply inline-block border-b border-transparent py-2;
     }
 
     &:hover{

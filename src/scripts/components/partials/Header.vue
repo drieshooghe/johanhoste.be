@@ -3,10 +3,12 @@
       <div class="container flex justify-between">
         <router-link :to="{ name: 'home' }"><div class="py-1"><img src="static/img/header_logo.svg" class="h-16"/></div></router-link>
         <nav class="flex">
-          <button class="flex lg:hidden">
-            <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+          <button class="z-50 hamburger hamburger--collapse lg:hidden" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="true/false" v-bind:class="{ 'is-active': mobileNavActive }" @click='toggle()'>
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
           </button>
-          <ul class="hidden lg:flex fixed lg:relative pin bg-green h-screen lg:h-auto w-screen lg:w-auto flex-col lg:flex-row lg:bg-transparent list-reset font-light uppercase text-2xl">
+          <ul class="z-10 lg:flex fixed lg:relative pin bg-dark h-screen lg:h-auto w-screen lg:w-auto flex-col lg:flex-row lg:bg-transparent list-reset font-light uppercase text-2xl" v-bind:class="{'hidden': !mobileNavActive}">
             <li><router-link v-bind:to="{ name: 'services' }" active-class="navbtn-active" class="navbtn trans"><div class="navbtn-label trans">Diensten</div></router-link></li>
             <li><router-link v-bind:to="{ name: 'testimonials' }" active-class="navbtn-active" class="navbtn trans"><div class="navbtn-label trans">Getuigenissen</div></router-link></li>
             <li><router-link v-bind:to="{ name: 'about' }" active-class="navbtn-active" class="navbtn trans"><div class="navbtn-label trans">Over mij</div></router-link></li>
@@ -16,3 +18,18 @@
       </div>
     </header>
 </template>
+
+<script>
+export default {
+  data() {
+    return{
+      mobileNavActive: false
+    }
+  },
+  methods: {
+    toggle() {
+      this.mobileNavActive = !this.mobileNavActive;
+    }
+  }
+};
+</script>

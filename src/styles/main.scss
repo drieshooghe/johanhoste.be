@@ -9,14 +9,9 @@
 @import "components/link";
 @import "components/buttons";
 @import "components/footer";
-
-#home{
-    background-image: url('img/home-background.jpg');
-}
+@import "components/hamburger";
 
 @import "settings/utilities.css";
 @import "utilities/transitions";
 @import "utilities/animations";
 @import "utilities/background";
-
-@import "../../node_modules/animate.css/animate.css"
