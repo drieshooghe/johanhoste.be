@@ -1,6 +1,6 @@
 <template>
     <div class="mt-12">
-      <nav>
+      <nav class="font-menu text-2xl">
         <router-link :to="{ name: 'services' }" class="home-navbtn trans"><div class="navbtn-label uppercase trans">Diensten</div></router-link>
         <router-link :to="{ name: 'testimonials' }" class="home-navbtn trans"><div class="navbtn-label uppercase trans">Getuigenissen</div></router-link>
         <router-link :to="{ name: 'about' }" class="home-navbtn trans"><div class="navbtn-label uppercase trans">Over mij</div></router-link>

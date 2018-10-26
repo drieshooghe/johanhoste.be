@@ -121,7 +121,7 @@ module.exports = {
 
   fonts: {
     'sans': [
-      'Raleway',
+      'Open Sans',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -154,6 +154,21 @@ module.exports = {
       'Liberation Mono',
       'Courier New',
       'monospace',
+    ],
+    'menu': [
+      'Oswald',
+      'system-ui',
+      'BlinkMacSystemFont',
+      '-apple-system',
+      'Segoe UI',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      'sans-serif',
     ]
   },
 
@@ -205,11 +220,9 @@ module.exports = {
   */
 
   fontWeights: {
-    'light': 300,
-    'normal': 400,
-    'medium': 500,
-    'semibold': 600,
-    'bold': 700,
+    'light': 200,
+    'normal': 300,
+    'bold': 500,
   },
 
 

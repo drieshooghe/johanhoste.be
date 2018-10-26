@@ -2,10 +2,6 @@
     <div id="about" class="container scroll-content">
           <PageTitle></PageTitle>
           <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
-          <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
-          <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
-          <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
-          <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
     </div>
 </template>
 
