@@ -8,11 +8,11 @@
               <span class="hamburger-inner"></span>
             </span>
           </button>
-          <ul class="z-10 lg:flex fixed lg:relative pin bg-dark h-screen lg:h-auto w-screen lg:w-auto flex-col lg:flex-row lg:bg-transparent list-reset font-light uppercase text-2xl" v-bind:class="{'hidden': !mobileNavActive}">
-            <li><router-link v-bind:to="{ name: 'services' }" active-class="navbtn-active" class="navbtn trans"><div class="navbtn-label trans">Diensten</div></router-link></li>
-            <li><router-link v-bind:to="{ name: 'testimonials' }" active-class="navbtn-active" class="navbtn trans"><div class="navbtn-label trans">Getuigenissen</div></router-link></li>
-            <li><router-link v-bind:to="{ name: 'about' }" active-class="navbtn-active" class="navbtn trans"><div class="navbtn-label trans">Over mij</div></router-link></li>
-            <li><router-link v-bind:to="{ name: 'contact' }" active-class="navbtn-active" class="navbtn -mr-4 trans"><div class="navbtn-label trans">Contact</div></router-link></li>
+          <ul class="z-10 lg:flex justify-center text-center fixed lg:relative pin bg-dark h-screen lg:h-auto w-screen lg:w-auto flex-col lg:flex-row lg:bg-transparent list-reset font-light uppercase text-2xl" v-bind:class="[mobileNavActive?'flex':'hidden']">
+            <li><router-link v-bind:to="{ name: 'services' }" active-class="navbtn-active" class="navbtn trans" v-on:click.native='toggle()'><div class="navbtn-label trans">Diensten</div></router-link></li>
+            <li><router-link v-bind:to="{ name: 'testimonials' }" active-class="navbtn-active" class="navbtn trans" v-on:click.native='toggle()'><div class="navbtn-label trans">Getuigenissen</div></router-link></li>
+            <li><router-link v-bind:to="{ name: 'about' }" active-class="navbtn-active" class="navbtn trans" v-on:click.native='toggle()'><div class="navbtn-label trans">Over mij</div></router-link></li>
+            <li><router-link v-bind:to="{ name: 'contact' }" active-class="navbtn-active" class="navbtn -mr-4 trans" v-on:click.native='toggle()'><div class="navbtn-label trans">Contact</div></router-link></li>
           </ul>
         </nav>
       </div>
