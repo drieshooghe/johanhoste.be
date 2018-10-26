@@ -4,6 +4,7 @@ import App from './App.vue';
 import Router from 'vue-router';
 
 import * as PH from './helpers/PageHelpers';
+import * as TH from './helpers/TestimonialHelper';
 
 import Home from './components/Home.vue';
 import Services from './components/Services.vue';
@@ -17,12 +18,14 @@ Vue.use(Router);
 
 declare var pageData: any;
 declare var infoData: any;
+declare var testimonials: any;
 
 const pageCollection = new PH.PageCollection(pageData);
 const store = new Vuex.Store({
     state: {
         pages: pageCollection,
-        info: new PH.Info(infoData)
+        info: new PH.Info(infoData),
+        testimonials: new TH.TestimonialCollection(testimonials)
     },
     getters: {
         getPageTitle: (state) => (handle: string) => {
@@ -36,6 +39,9 @@ const store = new Vuex.Store({
         },
         getContactInfo: (state) => (handle: any) => {
             return state.info.getContactInfo(handle);
+        },
+        getTestimonials: (state) => () => {
+            return state.testimonials;
         }
     }
 })

@@ -31,27 +31,27 @@ type httpResponse struct {
 type apiData struct {
 	General interface{}
 	Content interface{}
-	// Testimonials interface{}
+	Testimonials interface{}
 }
 
 func fetchRemoteContent(r *http.Request) interface{} {
 
 	var gChan = make(chan httpResponse)
 	var cChan = make(chan httpResponse)
-	// var tChan = make(chan httpResponse)
+	var tChan = make(chan httpResponse)
 
 	generalURL := "http://" + os.Getenv("API_HOST") + "/api/singletons/get/general?token=" + os.Getenv("API_TOKEN")
 	contentURL := "http://" + os.Getenv("API_HOST") + "/api/singletons/get/pages?token=" + os.Getenv("API_TOKEN")
-	// testimonialURL := "http://" + os.Getenv("API_HOST") + "/api/collections/get/testimonial?token=" + os.Getenv("API_TOKEN")
+	testimonialURL := "http://" + os.Getenv("API_HOST") + "/api/collections/get/testimonial?token=" + os.Getenv("API_TOKEN")
 
 	go makeGetRequest(r, generalURL, gChan)
 	go makeGetRequest(r, contentURL, cChan)
-	// go makeGetRequest(r, testimonialURL, cChan)
+	go makeGetRequest(r, testimonialURL, tChan)
 
 	var Data = apiData{
 		General: (<-gChan).body,
 		Content: (<-cChan).body,
-		// Testimonials: (<-tChan).body,
+		Testimonials: (<-tChan).body,
 	}
 
 	return Data
