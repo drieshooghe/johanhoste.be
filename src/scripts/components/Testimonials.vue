@@ -31,7 +31,9 @@ export default {
     for (let testim of this.testimonials) {
       for (let img of testim.getImageCollection().getImages()) {
         fetch(
-          "http://api.johanhoste.be/api/cockpit/image?token=540773c77b56e1dbf0d6f40c5e4d31",
+          this.$store.state.api.host +
+            "/api/cockpit/image?token=" +
+            this.$store.state.api.token,
           {
             method: "post",
             mode: "cors",
@@ -49,7 +51,9 @@ export default {
           })
           .catch(error => console.error(error));
         fetch(
-          "http://api.johanhoste.be/api/cockpit/image?token=540773c77b56e1dbf0d6f40c5e4d31",
+          this.$store.state.api.host +
+            "/api/cockpit/image?token=" +
+            this.$store.state.api.token,
           {
             method: "post",
             mode: "cors",
