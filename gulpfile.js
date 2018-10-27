@@ -10,6 +10,7 @@ const webpack_config = require('./webpack.config.js');
 const browsersync = require("browser-sync").create();
 const imagemin = require('gulp-imagemin');
 const imageminSvgo = require('imagemin-svgo');
+const purgecss = require('@fullhuman/postcss-purgecss')
 
 
 // -------------- TASKS --------------
@@ -39,6 +40,9 @@ gulp.task('css:prod', () => {
             atimport(),
             tailwindcss('src/styles/tailwind.config.js'),
             require('autoprefixer'),
+            purgecss({
+                content: ['./src/**/*.vue', './src/**/*.ts']
+            }),
             cssnano()
         ]))
         .pipe(gulp.dest('./static'));
