@@ -29,8 +29,8 @@ type httpResponse struct {
 }
 
 type apiData struct {
-	General interface{}
-	Content interface{}
+	General      interface{}
+	Content      interface{}
 	Testimonials interface{}
 }
 
@@ -49,8 +49,8 @@ func fetchRemoteContent(r *http.Request) interface{} {
 	go makeGetRequest(r, testimonialURL, tChan)
 
 	var Data = apiData{
-		General: (<-gChan).body,
-		Content: (<-cChan).body,
+		General:      (<-gChan).body,
+		Content:      (<-cChan).body,
 		Testimonials: (<-tChan).body,
 	}
 

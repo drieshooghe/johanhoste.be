@@ -25,7 +25,11 @@ const store = new Vuex.Store({
     state: {
         pages: pageCollection,
         info: new PH.Info(infoData),
-        testimonials: new TH.TestimonialCollection(testimonials)
+        testimonials: new TH.TestimonialCollection(testimonials.entries),
+        api: {
+            host: 'http://api.johanhoste.be',
+            token: '540773c77b56e1dbf0d6f40c5e4d31'
+        }
     },
     getters: {
         getPageTitle: (state) => (handle: string) => {
@@ -41,8 +45,14 @@ const store = new Vuex.Store({
             return state.info.getContactInfo(handle);
         },
         getTestimonials: (state) => () => {
-            return state.testimonials;
-        }
+            return state.testimonials.getTestimonials();
+        },
+        // getApiHost: (state) => () => {
+        //     return state.api.host;
+        // },
+        // getApiToken: (state) => () => {
+        //     return state.api.token;
+        // }
     }
 })
 
