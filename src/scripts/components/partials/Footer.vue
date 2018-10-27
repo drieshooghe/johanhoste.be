@@ -1,6 +1,6 @@
 <template>
     <footer class="block trans-slow bg-black py-6">
-      <div class="container text-xs md:text-sm">
+      <div class="container w-auto text-xs md:text-sm">
         <FooterTop></FooterTop>
         <FooterBottom></FooterBottom>
       </div>

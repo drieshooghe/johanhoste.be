@@ -1,5 +1,5 @@
 <template>
-    <div id="disclaimer" class="container scroll-content">
+    <div id="disclaimer" class="container w-auto scroll-content">
       <PageTitle></PageTitle>
       <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
     </div>

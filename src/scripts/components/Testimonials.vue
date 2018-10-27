@@ -1,5 +1,5 @@
 <template>
-    <div id="testimonials" class="container scroll-content">
+    <div id="testimonials" class="container w-auto scroll-content">
       <PageTitle></PageTitle>
       <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
       <section>
@@ -40,8 +40,8 @@ export default {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               src: img.path || img.id,
-              w: 200, // width
-              q: 90 // quality
+              w: 576, // width
+              q: 80 // quality
             })
           }
         )
@@ -60,7 +60,7 @@ export default {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               src: img.path || img.id,
-              w: 800, // width
+              w: 1080, // width
               q: 80 // quality
             })
           }

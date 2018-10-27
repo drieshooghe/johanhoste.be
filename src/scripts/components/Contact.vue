@@ -1,5 +1,5 @@
 <template>
-    <div id="contact" class="container scroll-content">
+    <div id="contact" class="container w-auto scroll-content">
         <PageTitle></PageTitle>
         <div class="mb-4 font-black"><h3>{{$store.getters.getContactInfo('name')}}</h3></div>
         <a href="" class="link mb-4">
