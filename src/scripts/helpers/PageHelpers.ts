@@ -49,7 +49,7 @@ export class PageCollection {
 
 export class Info {
     meta: any = { 'title': '', 'description': '' };
-    contact: any = { 'name': '', 'street': '', 'no': 0, 'zipcode': 0, 'place': '', 'phonenumber': '', 'email': '', 'vatcode': '' }
+    contact: any = { 'name': '', 'street': '', 'no': 0, 'zipcode': 0, 'place': '', 'phonenumber': '', 'email': '', 'vatcode': '', 'directionsurl': '' }
     constructor(data: any) {
         this.meta = [{ 'title': data.metatitle || '', 'description': data.metadescription || '' }];
         this.contact = [{
@@ -60,7 +60,8 @@ export class Info {
             'place': data.place || '',
             'phonenumber': data.phoneno || '',
             'email': data.email || '',
-            'vatcode': data.vatno || ''
+            'vatcode': data.vatno || '',
+            'directionsurl': data.directionsurl || ''
         }]
     }
     getMetaInfo(handle: any) {
