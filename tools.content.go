@@ -40,9 +40,9 @@ func fetchRemoteContent(r *http.Request) interface{} {
 	var cChan = make(chan httpResponse)
 	var tChan = make(chan httpResponse)
 
-	generalURL := "http://" + os.Getenv("API_HOST") + "/api/singletons/get/general?token=" + os.Getenv("API_TOKEN")
-	contentURL := "http://" + os.Getenv("API_HOST") + "/api/singletons/get/pages?token=" + os.Getenv("API_TOKEN")
-	testimonialURL := "http://" + os.Getenv("API_HOST") + "/api/collections/get/testimonial?token=" + os.Getenv("API_TOKEN")
+	generalURL := "https://" + os.Getenv("API_HOST") + "/api/singletons/get/general?token=" + os.Getenv("API_TOKEN")
+	contentURL := "https://" + os.Getenv("API_HOST") + "/api/singletons/get/Paginas?token=" + os.Getenv("API_TOKEN")
+	testimonialURL := "https://" + os.Getenv("API_HOST") + "/api/collections/get/testimonial?token=" + os.Getenv("API_TOKEN")
 
 	go makeGetRequest(r, generalURL, gChan)
 	go makeGetRequest(r, contentURL, cChan)
