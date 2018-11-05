@@ -27,8 +27,8 @@ const store = new Vuex.Store({
         info: new PH.Info(infoData),
         testimonials: new TH.TestimonialCollection(testimonials.entries),
         api: {
-            host: 'http://api.johanhoste.be',
-            token: '540773c77b56e1dbf0d6f40c5e4d31'
+            host: 'https://api.johanhoste.be',
+            token: '71eece069cf99283e780a3a2ffd144'
         }
     },
     getters: {
