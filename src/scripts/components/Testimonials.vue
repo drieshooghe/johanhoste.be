@@ -6,20 +6,25 @@
         <div v-for="testimonial in this.testimonials" v-bind:key="testimonial.id" class="mb-12">
           <div>{{ testimonial.getContent() }}</div>
           <div class="text-right py-6"><span class="italic">{{ testimonial.getName() }}</span></div>
-          <div v-for="image in testimonial.getImageCollection().getImages()" v-bind:key="image.id">
+          <div v-for="(image, i) in testimonial.getImageCollection().getImages()" v-bind:key="image.id" v-bind:class="{ 'pl-4': i !== 0 }" class="inline-block">
             <img src="static/img/no-image.jpg" v-bind:id="image.id" class="cursor-pointer">
           </div>
         </div>
       </section>
+      <LightBox></LightBox>
     </div>
 </template>
 
 <script>
 import PageTitle from "./partials/PageTitle.vue";
+import LightBox from "./partials/LightBox.vue";
+import * as PhotoSwipe from "photoswipe";
+import * as PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default";
 export default {
   name: "testimonials",
   components: {
-    PageTitle
+    PageTitle,
+    LightBox
   },
   data() {
     return {
@@ -28,8 +33,23 @@ export default {
   },
 
   async created() {
+    /**
+     * Initialize the lightbox container
+     */
+    let pswpElement = document.getElementsByClassName("pswp")[0];
+    let options = {
+      index: 0
+    };
+    let items = [];
+
+    /**
+     * Loop over the testimonial collection
+     */
     for (let testim of this.testimonials) {
       for (let img of testim.getImageCollection().getImages()) {
+        /**
+         * For each image of this testimonial fetch a thumbnail
+         */
         fetch(
           this.$store.state.api.host +
             "/api/cockpit/image?token=" +
@@ -40,7 +60,8 @@ export default {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               src: img.path || img.id,
-              w: 576, // width
+              w: 256, // width
+              h: 172,
               q: 80 // quality
             })
           }
@@ -50,6 +71,10 @@ export default {
             document.getElementById(img.id).setAttribute("src", res);
           })
           .catch(error => console.error(error));
+
+        /**
+         * For each image of this testimonial fetch a hiresolution image and append it to the lightbox gallery
+         */
         fetch(
           this.$store.state.api.host +
             "/api/cockpit/image?token=" +
@@ -68,8 +93,23 @@ export default {
           .then(res => res.text())
           .then(res => {
             document.getElementById(img.id).setAttribute("data-hires-src", res);
+            items.push({
+              src: res,
+              w: 1080,
+              h: 768
+            });
           })
           .catch(error => console.error(error));
+        /**
+         * Render lightbox
+         */
+        let gallery = new PhotoSwipe(
+          pswpElement,
+          PhotoSwipeUI_Default,
+          items,
+          options
+        );
+        gallery.init();
       }
     }
   }
