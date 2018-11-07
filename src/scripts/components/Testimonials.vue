@@ -103,13 +103,13 @@ export default {
         /**
          * Render lightbox
          */
-        let gallery = new PhotoSwipe(
-          pswpElement,
-          PhotoSwipeUI_Default,
-          items,
-          options
-        );
-        gallery.init();
+        // let gallery = new PhotoSwipe(
+        //   pswpElement,
+        //   PhotoSwipeUI_Default,
+        //   items,
+        //   options
+        // );
+        // gallery.init();
       }
     }
   }
