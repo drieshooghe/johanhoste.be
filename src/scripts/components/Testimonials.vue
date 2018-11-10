@@ -63,59 +63,60 @@ export default {
     }
 
     /**
-     * Initialize the lightbox container
+     * For each image of this testimonial fetch a hiresolution image and append it to the lightbox gallery
      */
-    let pswpElement = document.getElementsByClassName("pswp")[0];
-    let options = {
-      index: 0
-    };
-    let items = [];
-
-    /**
-     * Loop over the testimonial collection
-     */
+    let promises = [];
+    let images = [];
     for (let testim of this.testimonials) {
       for (let img of testim.getImageCollection().getImages()) {
-        /**
-         * For each image of this testimonial fetch a hiresolution image and append it to the lightbox gallery
-         */
-        fetch(
-          this.$store.state.api.host +
-            "/api/cockpit/image?token=" +
-            this.$store.state.api.token,
-          {
-            method: "post",
-            mode: "cors",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              src: img.path || img.id,
-              w: 1080, // width
-              q: 80 // quality
+        promises.push(
+          fetch(
+            this.$store.state.api.host +
+              "/api/cockpit/image?token=" +
+              this.$store.state.api.token,
+            {
+              method: "post",
+              mode: "cors",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                src: img.path || img.id,
+                w: 1080, // width
+                q: 80 // quality
+              })
+            }
+          )
+            .then(res => res.text())
+            .then(res => {
+              document
+                .getElementById(img.id)
+                .setAttribute("data-hires-src", res);
+              images.push({
+                src: res,
+                w: 1080,
+                h: 768
+              });
+              return true;
             })
-          }
-        )
-          .then(res => res.text())
-          .then(res => {
-            document.getElementById(img.id).setAttribute("data-hires-src", res);
-            items.push({
-              src: res,
-              w: 1080,
-              h: 768
-            });
-          })
-          .catch(error => console.error(error));
-        /**
-         * Render lightbox
-         */
-        // let gallery = new PhotoSwipe(
-        //   pswpElement,
-        //   PhotoSwipeUI_Default,
-        //   items,
-        //   options
-        // );
-        // gallery.init();
+            .catch(error => console.error(error))
+        );
       }
     }
+
+    /**
+     * Render lightbox
+     */
+    Promise.all(promises).then(res => {
+      let gallery = new PhotoSwipe(
+        document.getElementsByClassName("pswp")[0],
+        PhotoSwipeUI_Default,
+        images,
+        {
+          index: 0,
+          bgOpacity: 0.3
+        }
+      );
+      gallery.init();
+    });
   }
 };
 </script>
