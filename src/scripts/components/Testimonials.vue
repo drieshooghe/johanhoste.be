@@ -34,22 +34,10 @@ export default {
 
   async created() {
     /**
-     * Initialize the lightbox container
-     */
-    let pswpElement = document.getElementsByClassName("pswp")[0];
-    let options = {
-      index: 0
-    };
-    let items = [];
-
-    /**
-     * Loop over the testimonial collection
+     * For each image of this testimonial fetch a thumbnail
      */
     for (let testim of this.testimonials) {
       for (let img of testim.getImageCollection().getImages()) {
-        /**
-         * For each image of this testimonial fetch a thumbnail
-         */
         fetch(
           this.$store.state.api.host +
             "/api/cockpit/image?token=" +
@@ -71,7 +59,23 @@ export default {
             document.getElementById(img.id).setAttribute("src", res);
           })
           .catch(error => console.error(error));
+      }
+    }
 
+    /**
+     * Initialize the lightbox container
+     */
+    let pswpElement = document.getElementsByClassName("pswp")[0];
+    let options = {
+      index: 0
+    };
+    let items = [];
+
+    /**
+     * Loop over the testimonial collection
+     */
+    for (let testim of this.testimonials) {
+      for (let img of testim.getImageCollection().getImages()) {
         /**
          * For each image of this testimonial fetch a hiresolution image and append it to the lightbox gallery
          */
