@@ -40,9 +40,9 @@ gulp.task('css:prod', () => {
             atimport(),
             tailwindcss('src/styles/tailwind.config.js'),
             require('autoprefixer'),
-            purgecss({
-                content: ['./src/**/*.vue', './src/**/*.ts']
-            }),
+            // purgecss({
+            //     content: ['./src/**/*.vue', './src/**/*.ts']
+            // }),
             cssnano()
         ]))
         .pipe(gulp.dest('./static'));

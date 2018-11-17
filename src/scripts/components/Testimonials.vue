@@ -28,8 +28,8 @@ import PageTitle from "./partials/PageTitle.vue";
 export default {
   name: "testimonials",
   components: {
-    PageTitle,
-    LightBox
+    PageTitle
+    // LightBox
   },
   data() {
     return {
