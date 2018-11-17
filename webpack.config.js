@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
     entry: './src/scripts/main.ts',
@@ -63,11 +64,9 @@ if (process.env.NODE_ENV === 'production') {
     // http://vue-loader.vuejs.org/en/workflow/production.html
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
+            'process.env.NODE_ENV': JSON.stringify('production')
         }),
-        new webpack.optimize.UglifyJsPlugin({
+        new UglifyJSPlugin({
             sourceMap: true,
             compress: {
                 warnings: false
