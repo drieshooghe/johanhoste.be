@@ -1,17 +1,22 @@
 <template>
     <div id="testimonials" class="container w-auto scroll-content">
+
       <PageTitle></PageTitle>
+
       <div v-html="$store.getters.getPageContent(this.$options.name)"></div>
+
       <section>
-        <div v-for="testimonial in this.testimonials" v-bind:key="testimonial.id" class="mb-12">
+        <div v-for="(testimonial, testimIndex) in this.testimonials" v-bind:key="testimonial.id" class="mb-12">
           <div>{{ testimonial.getContent() }}</div>
           <div class="text-right py-6"><span class="italic">{{ testimonial.getName() }}</span></div>
-          <div v-for="(image, i) in testimonial.getImageCollection().getImages()" v-bind:key="image.id" v-bind:class="{ 'pl-4': i !== 0 }" class="inline-block">
-            <img src="static/img/no-image.jpg" v-bind:id="image.id" class="cursor-pointer">
-          </div>
+          <a v-for="(image, i) in testimonial.getImageCollection().getImages()" v-bind:key="image.id" v-bind:class="{ 'pl-4': i !== 0 }" class="inline-block">
+            <img src="static/img/no-image.jpg" v-bind:id="image.id" v-bind:class="'js-lightbox-trigger-' + testimIndex">
+          </a>
         </div>
       </section>
+
       <LightBox></LightBox>
+
     </div>
 </template>
 
@@ -66,8 +71,9 @@ export default {
      * For each image of this testimonial fetch a hiresolution image and append it to the lightbox gallery
      */
     let promises = [];
-    let images = [];
+    let imageCollections = [];
     for (let testim of this.testimonials) {
+      let images = [];
       for (let img of testim.getImageCollection().getImages()) {
         promises.push(
           fetch(
@@ -100,22 +106,30 @@ export default {
             .catch(error => console.error(error))
         );
       }
+      imageCollections.push(images);
     }
 
     /**
      * Render lightbox
      */
     Promise.all(promises).then(res => {
-      let gallery = new PhotoSwipe(
-        document.getElementsByClassName("pswp")[0],
-        PhotoSwipeUI_Default,
-        images,
-        {
-          index: 0,
-          bgOpacity: 0.3
+      for (let i in imageCollections) {
+        let gallery = new PhotoSwipe(
+          document.getElementsByClassName("pswp")[0],
+          PhotoSwipeUI_Default,
+          imageCollections[i],
+          {
+            index: 0,
+            bgOpacity: 0.6
+          }
+        );
+        let triggers = document.querySelectorAll(".js-lightbox-trigger-" + i);
+        for (let t of triggers) {
+          t.addEventListener("click", e => {
+            // gallery.init();
+          });
         }
-      );
-      gallery.init();
+      }
     });
   }
 };
