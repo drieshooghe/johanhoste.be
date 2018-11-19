@@ -9,8 +9,8 @@
         <div v-for="(testimonial, testimIndex) in this.testimonials" v-bind:key="testimonial.id" class="mb-12">
           <div>{{ testimonial.getContent() }}</div>
           <div class="text-right py-6"><span class="italic">{{ testimonial.getName() }}</span></div>
-          <a v-for="(image, i) in testimonial.getImageCollection().getImages()" v-bind:key="image.id" v-bind:class="{ 'pl-4': i !== 0 }" class="inline-block">
-            <img src="static/img/no-image.jpg" v-bind:id="image.id" v-bind:class="'js-lightbox-trigger-' + testimIndex">
+          <a v-for="(image, i) in testimonial.getImageCollection().getImages()" v-bind:key="image.id" v-bind:class="{ 'md:pl-4': i !== 0 }" class="block md:inline-block text-center pb-4 md:pb-0">
+            <img src="static/img/no-image.jpg" v-bind:id="image.id" v-bind:class="'js-lightbox-trigger-' + testimIndex" class="w-full md:w-auto">
           </a>
         </div>
       </section>
@@ -53,8 +53,8 @@ export default {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               src: img.path || img.id,
-              w: 256, // width
-              h: 172,
+              w: 384, // width
+              h: 258,
               q: 80 // quality
             })
           }

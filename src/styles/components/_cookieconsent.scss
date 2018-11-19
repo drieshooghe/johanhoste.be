@@ -1,0 +1,15 @@
+.Cookie__content {
+    a {
+        color: white;
+        transition: all 0.6s ease-in-out;
+       span {
+        border-bottom: 1px solid rgba(white, .6)
+       }
+
+       &:hover{
+           span{
+               border-color: rgba(white, 1)
+           }
+       }
+    }
+}

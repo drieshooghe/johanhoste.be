@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-12">
+    <div class="sm:mt-8 lg:mt-12">
       <nav class="font-menu text-2xl">
         <router-link :to="{ name: 'services' }" class="home-navbtn trans"><div class="navbtn-label uppercase trans">Diensten</div></router-link>
         <router-link :to="{ name: 'testimonials' }" class="home-navbtn trans"><div class="navbtn-label uppercase trans">Getuigenissen</div></router-link>

@@ -1324,10 +1324,6 @@ cookie@0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
 
-cookieconsent@^3.0.6:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/cookieconsent/-/cookieconsent-3.1.0.tgz#2c718b304d0e71a6e0d159cac8adf4205fdca152"
-
 copy-concurrently@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/copy-concurrently/-/copy-concurrently-1.0.5.tgz#92297398cae34937fcafd6ec8139c18051f0b5e0"
@@ -6785,6 +6781,10 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
 
+tiny-cookie@^2.1.1:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/tiny-cookie/-/tiny-cookie-2.2.0.tgz#b0f8518bf31a942de2189233094d8f842949f507"
+
 to-absolute-glob@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/to-absolute-glob/-/to-absolute-glob-0.1.1.tgz#1cdfa472a9ef50c239ee66999b662ca0eb39937f"
@@ -7210,6 +7210,12 @@ vm-browserify@0.0.4:
 vue-class-component@^6.0.0, vue-class-component@^6.1.0:
   version "6.3.2"
   resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-6.3.2.tgz#e6037e84d1df2af3bde4f455e50ca1b9eec02be6"
+
+vue-cookie-law@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/vue-cookie-law/-/vue-cookie-law-1.8.0.tgz#17e400708e41fabe47d65534cfe65f288f2ca20e"
+  dependencies:
+    tiny-cookie "^2.1.1"
 
 vue-hot-reload-api@^2.1.0:
   version "2.3.1"

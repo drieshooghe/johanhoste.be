@@ -20,8 +20,6 @@ declare var pageData: any;
 declare var infoData: any;
 declare var testimonials: any;
 
-console.log('Running production mode');
-
 const pageCollection = new PH.PageCollection(pageData);
 const store = new Vuex.Store({
     state: {
