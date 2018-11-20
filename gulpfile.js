@@ -10,6 +10,7 @@ const webpack_config = require('./webpack.config.js');
 const browsersync = require("browser-sync").create();
 const imagemin = require('gulp-imagemin');
 const imageminSvgo = require('imagemin-svgo');
+const imageminJpegtran = require('imagemin-jpegtran');
 const purgecss = require('@fullhuman/postcss-purgecss')
 
 
@@ -65,14 +66,11 @@ gulp.task('js:watch', function () {
 // Compress images
 gulp.task('img', () =>
     gulp.src('src/img/*')
-        .pipe(imagemin([
-            imagemin.svgo({
-                plugins: [
-                    { removeViewBox: true },
-                    { cleanupIDs: false }
-                ]
-            })
-        ]))
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{ removeViewBox: false }],
+            use: [imageminJpegtran()]
+        }))
         .pipe(gulp.dest('static/img'))
 );
 
