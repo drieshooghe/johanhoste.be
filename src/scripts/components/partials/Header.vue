@@ -1,7 +1,7 @@
 <template>
     <header class="bg-green font-white font-menu py-3 lg:py-6 scroll-header">
       <div class="container w-auto flex justify-between">
-        <router-link :to="{ name: 'home' }"><div class="py-1"><img src="static/img/header_logo.svg" class="h-16"/></div></router-link>
+        <router-link :to="{ name: 'home' }"><div class="py-1"><img src="static/img/header_logo.svg" class="h-12 lg:h-16"/></div></router-link>
         <nav class="flex">
           <button class="z-50 hamburger hamburger--collapse lg:hidden" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="true/false" v-bind:class="{ 'is-active': mobileNavActive }" @click='toggle()'>
             <span class="hamburger-box">
