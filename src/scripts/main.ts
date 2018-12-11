@@ -4,11 +4,11 @@ import App from './App.vue';
 import Router from 'vue-router';
 
 import * as PH from './helpers/PageHelpers';
-import * as TH from './helpers/TestimonialHelper';
+// import * as TH from './helpers/TestimonialHelper';
 
 import Home from './components/Home.vue';
 import Services from './components/Services.vue';
-import Testimonials from './components/Testimonials.vue';
+// import Testimonials from './components/Testimonials.vue';
 import About from './components/About.vue';
 import Contact from './components/Contact.vue';
 import Disclaimer from './components/Disclaimer.vue';
@@ -18,18 +18,14 @@ Vue.use(Router);
 
 declare var pageData: any;
 declare var infoData: any;
-declare var testimonials: any;
+// declare var testimonials: any;
 
 const pageCollection = new PH.PageCollection(pageData);
 const store = new Vuex.Store({
     state: {
         pages: pageCollection,
         info: new PH.Info(infoData),
-        testimonials: new TH.TestimonialCollection(testimonials.entries),
-        api: {
-            host: 'https://api.johanhoste.be',
-            token: '71eece069cf99283e780a3a2ffd144'
-        }
+        // testimonials: new TH.TestimonialCollection(testimonials.entries)
     },
     getters: {
         getPageTitle: (state) => (handle: string) => {
@@ -44,9 +40,9 @@ const store = new Vuex.Store({
         getContactInfo: (state) => (handle: any) => {
             return state.info.getContactInfo(handle);
         },
-        getTestimonials: (state) => () => {
-            return state.testimonials.getTestimonials();
-        },
+        // getTestimonials: (state) => () => {
+        //     return state.testimonials.getTestimonials();
+        // },
         // getApiHost: (state) => () => {
         //     return state.api.host;
         // },
