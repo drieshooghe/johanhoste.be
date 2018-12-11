@@ -1,4 +1,2 @@
 # johanhoste
-Professional website Johan Hoste
-
-Check: https://github.com/tailwindcss/tailwindcss/issues/231
+Professional website (Johan Hoste)[https://www.johanhoste.be]
