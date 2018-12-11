@@ -5,3 +5,6 @@ Professional website [Johan Hoste](https://www.johanhoste.be)
 - Golang
 - Vue
 - Typescript
+
+### Backend:
+Cockpit CMS (headless)
