@@ -1,2 +1,2 @@
 # johanhoste
-Professional website (Johan Hoste)[https://www.johanhoste.be]
+Professional website [Johan Hoste](https://www.johanhoste.be)
