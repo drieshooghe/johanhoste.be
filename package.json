@@ -25,6 +25,7 @@
     "@types/react": "^16.9.17",
     "@zeit/next-sass": "^1.0.1",
     "autoprefixer": "^9.7.3",
+    "babel-plugin-inline-react-svg": "^1.1.1",
     "cssnano": "^4.1.10",
     "node-sass": "^4.13.1",
     "serve": "^11.2.0",
