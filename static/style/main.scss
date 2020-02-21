@@ -1,0 +1,15 @@
+/* purgecss start ignore */
+@tailwind base;
+/* purgecss end ignore */
+
+@tailwind components;
+
+@tailwind utilities;
+
+.app {
+	background-color: red;
+}
+
+.trans {
+	transition: all .2s linear;
+}
