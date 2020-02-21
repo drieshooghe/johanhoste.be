@@ -19,7 +19,7 @@ export const Content = {
 	pages: {
 		'404': {
 			title: 'Pagina niet gevonden',
-			content: [
+			body: [
 				'De verkeerde noot gespeeld, de door u verzochte pagina lijkt niet te bestaan...',
 				'Keer terug naar de:'
 			],
@@ -28,11 +28,11 @@ export const Content = {
 		},
 		home: {
 			title: 'Johan Hoste',
-			content: 'Pianostemmer en restaurateur'
+			body: 'Pianostemmer en restaurateur'
 		},
 		about: {
 			title: 'Wie ben ik?',
-			content: [
+			body: [
 				{
 					p: 'Op 1 oktober 2018 ben ik gestart als pianostemmer en restaurateur in bijberoep.'
 				},
@@ -54,7 +54,7 @@ export const Content = {
 		},
 		services: {
 			title: 'Welke diensten bied ik aan?',
-			content: [
+			body: [
 				{
 					t: 'Stemmen van uw piano',
 					p: 'Ik stem zowel buffetpiano\'s als vleugelpiano\'s.\nPer stembeurt is de prijs 80 euro voor een <strong>buffetpiano</strong> en 120 euro voor een <strong>vleugelpiano</strong>.'
@@ -83,11 +83,11 @@ export const Content = {
 		},
 		testimonials: {
 			title: 'Klanten aan het woord',
-			content: []
+			body: []
 		},
 		contact: {
 			title: 'Vragen? Neem gerust contact op!',
-			content: ''
+			body: ''
 		}
 	}
 }

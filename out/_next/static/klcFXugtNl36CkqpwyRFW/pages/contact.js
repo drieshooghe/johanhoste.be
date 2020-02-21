@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{QLSJ:function(n,t,c){(window.__NEXT_P=window.__NEXT_P||[]).push(["/contact",function(){return c("qARc")}])},qARc:function(n,t,c){"use strict";c.r(t);t.default=function(){return"test"}}},[["QLSJ",0]]]);
