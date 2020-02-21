@@ -1,0 +1,18 @@
+/* purgecss start ignore */
+@tailwind base;
+/* purgecss end ignore */
+
+@tailwind components;
+
+@tailwind utilities;
+
+.app {
+	@apply w-screen h-screen flex font-body;
+	background: #00467F;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #00467F, #A5CC82);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #00467F, #A5CC82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.trans {
+	transition: all .2s linear;
+}
