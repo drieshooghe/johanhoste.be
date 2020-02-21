@@ -5,8 +5,14 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				'congress-blue': '#00467F',
-				'willow-green': '#A5CC82'
+				'transparent': 'transparent',
+				'black': '#22292f',
+				'grey': '#c1c1c1',
+				'grey-lighter': '#d3d3d3',
+				'white': '#ffffff',
+				'blue': '#2c4251',
+				'green': '#667761',
+				'red': '#9b6a6c',
 			},
 			fontFamily: {
 				'display': ['Raleway', 'sans-serif'],

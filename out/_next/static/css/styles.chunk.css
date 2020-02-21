@@ -11011,18 +11011,22 @@ video {
   transition-duration: 1000ms;
 }
 
-.app {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  font-family: Kulim Park, sans-serif;
-  background: #00467F;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #00467F, #A5CC82);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #00467F, #A5CC82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.trans {
+  transition: all .25s ease-in-out;
 }
 
-.trans {
-  transition: all .2s linear;
+.trans-slow {
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bg-cover-home {
+  background-image: url("/public/img/home-background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media (min-width: 640px) {
