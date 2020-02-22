@@ -4,7 +4,7 @@ import { NavBar } from '../components/navigational/navbar';
 export default function TermsAndConditions() {
 	return (
 		<div>
-			<NavBar/>
+			<NavBar />
 			<p>Ingangsdatum: November 17, 2018</p>
 			<p>Johan Hoste ("ons", "wij" of "onze") beheert de https://www.johanhoste.be website ("hierna genoemd Dienst").</p>
 			<p>Deze pagina bevat informatie over ons beleid met betrekking tot de verzameling, het gebruik en de openbaarmaking van uw persoonsgegevens wanneer u onze Dienst gebruikt en de keuzes die u hebt met betrekking tot die gegevens.</p>

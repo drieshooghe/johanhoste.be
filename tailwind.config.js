@@ -15,11 +15,18 @@ module.exports = {
 				'red': '#9b6a6c',
 			},
 			fontFamily: {
-				'display': ['Raleway', 'sans-serif'],
-				'body': ['Kulim Park', 'sans-serif'],
+				'sans': ['Open Sans'],
+				'serif': ['Constantia'],
+				'mono': ['Menlo'],
+				'menu': ['Oswald']
 			},
 			fontSize: {
 				'7xl': '6rem',
+			},
+			fontWeights: {
+				'light': 200,
+				'normal': 300,
+				'bold': 500,
 			},
 		}
 	},

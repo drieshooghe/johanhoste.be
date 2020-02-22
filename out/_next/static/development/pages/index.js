@@ -1,5 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
+/***/ "./assets/logo/jh-logo-white.svg":
+/*!***************************************!*\
+  !*** ./assets/logo/jh-logo-white.svg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj48c3ZnIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCA0NjYgNTA2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zOnNlcmlmPSJodHRwOi8vd3d3LnNlcmlmLmNvbS8iIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MjsiPjxnPjxwYXRoIGQ9Ik0yMzcuMDY3LDQ0NS4zMzZjNC42MDEsMCA4LjE0MSwtMS4xNTEgMTAuNjE5LC0zLjQ1MmM0LjA3LC00LjA3IDYuMTk0LC04LjQwNiA2LjM3MSwtMTMuMDA4bDAsLTU4LjUyN2wtOTkuODQyLDBsMCw1OC4yNjJjMCw0LjYwMSAxLjY4MSw4LjUzOSA1LjA0NCwxMS44MTNjMy4zNjMsMy4yNzUgNy4zNDUsNC45MTIgMTEuOTQ3LDQuOTEybDMuMTg2LDBsMC4yNjUsMi42NTVsLTgwLjcwNiwwbDAsLTIuNjU1bDMuNDUyLDBjNC42MDEsMCA4LjUzOSwtMS42MzcgMTEuODEzLC00LjkxMmMzLjI3NSwtMy4yNzQgNSwtNy4yMTIgNS4xNzcsLTExLjgxM2wwLC0xNDcuMDc2Yy0wLjE3NywtNC42MDEgLTEuOTAyLC04LjUzOSAtNS4xNzcsLTExLjgxM2MtMy4yNzQsLTMuMjc1IC03LjIxMiwtNC45MTIgLTExLjgxMywtNC45MTJsLTMuNDUyLDBsMCwtMi42NTVsODAuNzA2LDBsLTAuMjY1LDIuNjU1bC0zLjE4NiwwYy00LjYwMiwwIC04LjU4NCwxLjYzNyAtMTEuOTQ3LDQuOTEyYy0zLjM2MywzLjI3NCAtNS4wNDQsNy4yMTIgLTUuMDQ0LDExLjgxM2wwLDU4LjI5M2w5OS44NDIsMGwwLC01OC4yOTNjLTAuMTc3LC00LjYwMSAtMS45MDIsLTguNTM5IC01LjE3NywtMTEuODEzYy0zLjI3NCwtMy4yNzUgLTcuMjEyLC00LjkxMiAtMTEuODEzLC00LjkxMmwtMy40NTIsMGwwLC0yLjY1NWw4MC43MDYsMGwwLDIuNjU1bC0zLjQ1MSwwYy00LjYwMiwwIC04LjU4NCwxLjYzNyAtMTEuOTQ3LDQuOTEyYy0zLjM2MywzLjI3NCAtNS4wNDQsNy4yMTIgLTUuMDQ0LDExLjgxM2wwLDE0Ny4wNzZjMCw0LjYwMSAxLjY4MSw4LjUzOSA1LjA0NCwxMS44MTNjMy4zNjMsMy4yNzUgNy4zNDUsNC45MTIgMTEuOTQ3LDQuOTEybDMuNDUxLDBsMCwyLjY1NWwtODAuNzA2LDBsMCwtMi42NTVsMy40NTIsMFoiIHN0eWxlPSJmaWxsOiNmZmY7ZmlsbC1ydWxlOm5vbnplcm87Ii8+PHBhdGggZD0iTTI3LjMwNSw0MzUuOTdsLTAuMDEsLTQzNS43OTJjMzMuMDQxLC0wLjAzMSA2Ni4xMDYsLTAuMDU3IDk5LjA5MiwtMC4wNTFjMjAuNDM0LDAuMDEgNDEuNDU3LC0xLjE3NCA2MC45NiwzLjUwMmMxNS4wMTEsMy41OTkgMjkuMTg5LDEwLjUyOCA0MS4xOTQsMjAuMjM5YzMzLjIsMjYuODU0IDQ4LjcwNyw3MS4zMzggODAuMzk0LDEwMC4xOTNjMjguOTUxLDI2LjM2MiA2OC4zNDIsNDAuMjQ5IDEwMC40NjIsNTkuODMzYzE4LjEyOCwxMS4wNTQgMzUuMjc5LDI1LjA2NyA0NS41MjcsNDQuMzYzYzE5LjExNywzNS45OTQgMTIuNTYxLDg0Ljg4OSAtMTUuNjgyLDExMi4yNWMtMi4wMzksMS45NzUgLTQuMTc1LDMuODQ4IC02LjM5NCw1LjYxOGMtMjAuNzk2LDE2LjU4OSAtNDguMDAzLDIzLjQ4NCAtNzMuNjksMjUuNjY1bC0yMi4zNjcsMC43OTVsLTE1Ljk4NywtMC4wMzVsLTAuMDAxLC0zNC45NDdjMTAuMzA1LC0wLjAxNCAxMC4yMiwtMC4wMjYgMjAuNTI1LC0wLjA0MWMwLDAgMy41MDEsLTAuMDQzIDUuOTkxLC0wLjEzNWMzLjI2LC0wLjExOSA2LjUxNywtMC4zMTcgOS43NjYsLTAuNjA1YzI2Ljc3OCwtMi4zNzIgNTUuNzg2LC0xMC41NjQgNjcuNjY1LC0zNS4wNzZjNS4yMDgsLTEwLjc0NiA2LjUyNCwtMjMuMDg2IDUuNDc4LC0zNS4xYy0xLjMyMywtMTUuMTc3IC04LjkyMiwtMjkuMzEyIC0yMC42OTIsLTM5LjY3Yy0yMC4wNTUsLTE3LjY0OCAtNDUuNjU2LC0yNy42MTYgLTY5Ljk1NCwtNDAuNTY1Yy0yNC44NSwtMTMuMjQzIC00OC42NjcsLTI4LjgwNSAtNjcuNjMxLC01MC4wMzJjLTE5LjAwNCwtMjEuMjcyIC0zMi4zNjIsLTQ3LjI4MyAtNDkuOTk2LC02OS4zNTZjLTEwLjkzMywtMTMuNjg0IC0yNS4xNTgsLTI1LjIgLTQzLjA5OCwtMjkuNDJjLTEwLjQyOSwtMi40NTMgLTIxLjIzLC0yLjQyNyAtMzIuMTI1LC0yLjQ0NGMtMjguMTQsLTAuMDM1IC01Ni4yOCwtMC4wMTYgLTg0LjQyLDAuMDA0bC0wLjAwMSw0MDEuNzA0YzAsMTQuMTY1IC0yLjk1NiwyNi44MzMgLTguODY4LDM4LjAwNWMtNS45MTIsMTEuMTcyIC0xMy4xNDcsMTkuMTUyIC0yMS43MDQsMjMuOTRjLTguNTU3LDQuNzg4IC0xNy4xMTQsNy4xODIgLTI1LjY3MSw3LjE4MmMtMi4wMjMsMCAtNC4wNDUsLTAuMDk5IC02LjA2OCwtMC4yOTlsMCwtMi42OTNjOS4zMzUsLTQuOTg4IDE2LjIyLC0xMy42MTYgMjAuNjU0LC0yNS44ODVjNC40MzQsLTEyLjI3IDYuNjUxLC0yNS45ODUgNi42NTEsLTQxLjE0N1oiIHN0eWxlPSJmaWxsOiNmZmY7ZmlsbC1ydWxlOm5vbnplcm87Ii8+PC9nPjwvc3ZnPg=="
+
+/***/ }),
+
 /***/ "./components/logo.tsx":
 /*!*****************************!*\
   !*** ./components/logo.tsx ***!
@@ -40,46 +51,14 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Logo, [{
     key: "render",
     value: function render() {
-      return __jsx("svg", {
-        viewBox: "0 0 466 506",
-        version: "1.1",
-        xmlBase: "http://www.w3.org/2000/svg",
-        xmlnsXlink: "http://www.w3.org/1999/xlink",
-        xmlSpace: "preserve",
-        fillRule: "evenodd",
-        clipRule: "evenOdd",
-        strokeLinejoin: "round",
-        strokeMiterlimit: "1.41421",
+      return __jsx("img", {
+        src: __webpack_require__(/*! ../assets/logo/jh-logo-white.svg */ "./assets/logo/jh-logo-white.svg"),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 5
         },
         __self: this
-      }, __jsx("g", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        },
-        __self: this
-      }, __jsx("path", {
-        d: "M237.067,445.336c4.601,0 8.141,-1.151 10.619,-3.452c4.07,-4.07 6.194,-8.406 6.371,-13.008l0,-58.527l-99.842,0l0,58.262c0,4.601 1.681,8.539 5.044,11.813c3.363,3.275 7.345,4.912 11.947,4.912l3.186,0l0.265,2.655l-80.706,0l0,-2.655l3.452,0c4.601,0 8.539,-1.637 11.813,-4.912c3.275,-3.274 5,-7.212 5.177,-11.813l0,-147.076c-0.177,-4.601 -1.902,-8.539 -5.177,-11.813c-3.274,-3.275 -7.212,-4.912 -11.813,-4.912l-3.452,0l0,-2.655l80.706,0l-0.265,2.655l-3.186,0c-4.602,0 -8.584,1.637 -11.947,4.912c-3.363,3.274 -5.044,7.212 -5.044,11.813l0,58.293l99.842,0l0,-58.293c-0.177,-4.601 -1.902,-8.539 -5.177,-11.813c-3.274,-3.275 -7.212,-4.912 -11.813,-4.912l-3.452,0l0,-2.655l80.706,0l0,2.655l-3.451,0c-4.602,0 -8.584,1.637 -11.947,4.912c-3.363,3.274 -5.044,7.212 -5.044,11.813l0,147.076c0,4.601 1.681,8.539 5.044,11.813c3.363,3.275 7.345,4.912 11.947,4.912l3.451,0l0,2.655l-80.706,0l0,-2.655l3.452,0Z",
-        fill: "#fff",
-        fillRule: "nonzero",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17
-        },
-        __self: this
-      }), __jsx("path", {
-        d: "M27.305,435.97l-0.01,-435.792c33.041,-0.031 66.106,-0.057 99.092,-0.051c20.434,0.01 41.457,-1.174 60.96,3.502c15.011,3.599 29.189,10.528 41.194,20.239c33.2,26.854 48.707,71.338 80.394,100.193c28.951,26.362 68.342,40.249 100.462,59.833c18.128,11.054 35.279,25.067 45.527,44.363c19.117,35.994 12.561,84.889 -15.682,112.25c-2.039,1.975 -4.175,3.848 -6.394,5.618c-20.796,16.589 -48.003,23.484 -73.69,25.665l-22.367,0.795l-15.987,-0.035l-0.001,-34.947c10.305,-0.014 10.22,-0.026 20.525,-0.041c0,0 3.501,-0.043 5.991,-0.135c3.26,-0.119 6.517,-0.317 9.766,-0.605c26.778,-2.372 55.786,-10.564 67.665,-35.076c5.208,-10.746 6.524,-23.086 5.478,-35.1c-1.323,-15.177 -8.922,-29.312 -20.692,-39.67c-20.055,-17.648 -45.656,-27.616 -69.954,-40.565c-24.85,-13.243 -48.667,-28.805 -67.631,-50.032c-19.004,-21.272 -32.362,-47.283 -49.996,-69.356c-10.933,-13.684 -25.158,-25.2 -43.098,-29.42c-10.429,-2.453 -21.23,-2.427 -32.125,-2.444c-28.14,-0.035 -56.28,-0.016 -84.42,0.004l-0.001,401.704c0,14.165 -2.956,26.833 -8.868,38.005c-5.912,11.172 -13.147,19.152 -21.704,23.94c-8.557,4.788 -17.114,7.182 -25.671,7.182c-2.023,0 -4.045,-0.099 -6.068,-0.299l0,-2.693c9.335,-4.988 16.22,-13.616 20.654,-25.885c4.434,-12.27 6.651,-25.985 6.651,-41.147Z",
-        fill: "#fff",
-        fillRule: "nonzero",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18
-        },
-        __self: this
-      })));
+      });
     }
   }]);
 
@@ -147,7 +126,7 @@ function (_Component) {
         },
         __self: this
       }, "Johan Hoste"), __jsx("link", {
-        href: "https://fonts.googleapis.com/css?family=Raleway&display=swap",
+        href: "https://fonts.googleapis.com/css?family=Oswald:200,300,500&display=swap",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
@@ -11297,72 +11276,68 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 
+var backgroundImage = {
+  backgroundImage: "url('img/home-background.jpg')"
+};
 function Index() {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 13
     },
     __self: this
   }, __jsx(_components_meta_tags__WEBPACK_IMPORTED_MODULE_3__["HeaderTags"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 14
     },
     __self: this
   }), __jsx("div", {
     className: "font-sans bg-white w-screen max-w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 15
     },
     __self: this
   }, __jsx("div", {
     className: "flex flex-col h-screen bg-cover-home justify-center items-center",
+    style: backgroundImage,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 16
     },
     __self: this
   }, __jsx("div", {
     className: "flex flex-col min-h-screen justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 17
     },
     __self: this
-  }, __jsx("img", {
-    src: "/public/home-background.jpg",
-    alt: "",
+  }, __jsx(_components_logo__WEBPACK_IMPORTED_MODULE_4__["Logo"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }), __jsx(_components_logo__WEBPACK_IMPORTED_MODULE_4__["Logo"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: this
   }), __jsx("h1", {
     className: "text-white font-light font-menu text-4xl lg:text-5xl text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 19
     },
     __self: this
   }, _content__WEBPACK_IMPORTED_MODULE_2__["Content"].pages.home.title), __jsx("div", {
     className: "text-white font-light font-menu text-1xl lg:text-2xl text-center pb-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 20
     },
     __self: this
   }, _content__WEBPACK_IMPORTED_MODULE_2__["Content"].pages.home.body), __jsx(_components_navigational_navbar__WEBPACK_IMPORTED_MODULE_1__["NavBar"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 21
     },
     __self: this
   })))));

@@ -8,7 +8,7 @@ export class HeaderTags extends Component {
 	render() {
 		return <Head>
 		<title>Johan Hoste</title>
-		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"></link>
+		<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,500&display=swap" rel="stylesheet"/>
 		<link rel="stylesheet" href="/_next/public/style/main.chunk.css"/>
 	</Head>;
 	}
