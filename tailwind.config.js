@@ -3,6 +3,17 @@ module.exports = {
 		container: {
 			center: true,
 		},
+		fontFamily: {
+			'sans': ['Open Sans'],
+			'serif': ['Constantia'],
+			'mono': ['Menlo'],
+			'menu': ['Oswald']
+		},
+		fontWeight: {
+			'light': 200,
+			'normal': 300,
+			'bold': 500,
+		},
 		extend: {
 			colors: {
 				'transparent': 'transparent',
@@ -14,19 +25,8 @@ module.exports = {
 				'green': '#667761',
 				'red': '#9b6a6c',
 			},
-			fontFamily: {
-				'sans': ['Open Sans'],
-				'serif': ['Constantia'],
-				'mono': ['Menlo'],
-				'menu': ['Oswald']
-			},
 			fontSize: {
 				'7xl': '6rem',
-			},
-			fontWeights: {
-				'light': 200,
-				'normal': 300,
-				'bold': 500,
 			},
 		}
 	},

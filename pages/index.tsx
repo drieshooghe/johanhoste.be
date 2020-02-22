@@ -15,7 +15,7 @@ export default function Index() {
       <div className="flex flex-col min-h-screen">
         <div className="flex flex-col h-screen bg-cover-home justify-center items-center" style={backgroundImage}>
           <Logo />
-          <h1 className="text-white font-light font-menu text-4xl lg:text-5xl text-center">{Content.pages.home.title}</h1>
+          <h1 className="text-white font-light font-menu text-4xl lg:text-5xl text-center pb-3">{Content.pages.home.title}</h1>
           <div className="text-white font-light font-menu text-1xl lg:text-2xl text-center pb-3">{Content.pages.home.body}</div>
           <NavBar />
         </div>

@@ -20,7 +20,7 @@
 			@apply inline-block py-4;
 	}
 	.navbtn-label{
-			@apply block border-b border-transparent py-2;
+			@apply block border-b border-transparent py-2 font-light;
 	}
 
 	&:hover{
