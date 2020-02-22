@@ -3,6 +3,7 @@ import { NavBar } from '../components/navigational/navbar';
 import { Content } from '../content';
 import { HeaderTags } from '../components/meta/tags'
 import { Logo } from '../components/logo';
+import { Footer } from '../components/footer/footer';
 
 var backgroundImage = {
   backgroundImage: `url('img/home-background.jpg')`
@@ -20,6 +21,7 @@ export default function Index() {
           <NavBar />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

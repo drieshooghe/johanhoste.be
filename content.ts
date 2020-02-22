@@ -14,6 +14,13 @@ export const Content = {
 			email: 'pianostemmer@johanhoste.be',
 			vatNumber: 'BE76 7360 5063 7195',
 			geoLink: 'https://goo.gl/maps/ptRwLYRP3tz'
+		},
+		disclaimer: {
+			message: 'Deze website maakt gebruik van cookies om uw gebruikerservaring te optimaliseren. Wilt u meer weten over deze cookies?',
+			ctaMessage: 'Klik dan hier.',
+			ctaLink: '/disclaimer',
+			buttonMessage: 'Deze cookies zijn oké 🍪',
+			expires: 150
 		}
 	},
 	pages: {
