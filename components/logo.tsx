@@ -1,10 +1,15 @@
 import { Component } from "react";
 
-export class Logo extends Component {
+interface ILogoProps {
+	className: string;
+}
+
+export class Logo extends Component<ILogoProps, {}> {
+
 	render() {
 		return <img
 			src={require('../assets/logo/jh-logo-white.svg')}
-			className="w-24 md:w-48 lg:w-64 mb-8"
+			className={this.props.className}
 		></img>;
 	}
 }
