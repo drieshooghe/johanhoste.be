@@ -2,6 +2,7 @@ module.exports = {
 	theme: {
 		container: {
 			center: true,
+			padding: '3rem',
 		},
 		fontFamily: {
 			'sans': ['Open Sans'],
