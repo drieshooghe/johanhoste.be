@@ -18,6 +18,19 @@ export class Header extends Component<{}, IHeader> {
 	}
 
 	render() {
+
+		const links = [
+			{ link: '/services', alias: 'diensten', label: 'Diensten' },
+			{ link: '/about', alias: 'over-mij', label: 'Over mij' },
+			{ link: '/contact', alias: 'contact', label: 'Contact' }
+		].map(link => <Link href={link.link} as={link.alias}>
+			<li>
+				<a className='navbtn trans cursor-pointer'>
+					<div className="navbtn-label trans">{link.label}</div>
+				</a>
+			</li>
+		</Link>)
+
 		return <header className="bg-green font-white font-menu py-3 lg:py-6 scroll-header">
 			<div className="container w-auto flex justify-between">
 				<Link href="/">
@@ -32,27 +45,7 @@ export class Header extends Component<{}, IHeader> {
 						</span>
 					</button>
 					<ul className={`${this.state.mobNavActive ? 'flex' : 'hidden'} z-10 lg:flex justify-center text-center fixed lg:relative inset-0 bg-dark h-screen lg:h-auto w-screen lg:w-auto flex-col lg:flex-row lg:bg-transparent list-reset font-light uppercase text-2xl pb-0`}>
-						<Link href='/services' as='diensten'>
-							<li>
-								<a className='navbtn trans cursor-pointer'>
-									<div className="navbtn-label trans">Diensten</div>
-								</a>
-							</li>
-						</Link>
-						<Link href='/about' as='over-mij'>
-							<li>
-								<a className='navbtn trans cursor-pointer'>
-									<div className="navbtn-label trans">Over mij</div>
-								</a>
-							</li>
-						</Link>
-						<Link href='/contact' as='contact'>
-							<li>
-								<a className='navbtn trans cursor-pointer'>
-									<div className="navbtn-label trans">Contact</div>
-								</a>
-							</li>
-						</Link>
+						{links}
 					</ul>
 				</nav>
 			</div>
