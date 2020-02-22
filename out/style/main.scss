@@ -1,9 +1,20 @@
 /* purgecss start ignore */
 @tailwind base;
 /* purgecss end ignore */
+@import "generic/a";
+@import "generic/p";
+@import "generic/headings";
+@import "generic/lists";
 
 @tailwind components;
+@import "components/link";
+@import "components/buttons";
 
 @tailwind utilities;
 @import "utilities/transitions";
+@import "utilities/animations";
 @import "utilities/background";
+
+// Vendors
+@import "vendors/cookieconsent";
+@import "vendors/hamburger";
