@@ -1,9 +1,9 @@
 import '../../public/style/main.scss';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Head from 'next/head';
 
 export class HeaderTags extends Component {
-  render() {
+  render(): JSX.Element {
     return (
       <Head>
         <title>Johan Hoste</title>

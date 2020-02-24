@@ -1,10 +1,10 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import CookieConsent from 'react-cookie-consent';
 import { Content } from '../../content';
 import Link from 'next/link';
 
 export class Footer extends Component {
-  render() {
+  render(): JSX.Element {
     return (
       <footer className="block trans-slow bg-black py-6">
         <div className="container w-auto text-xs md:text-sm">

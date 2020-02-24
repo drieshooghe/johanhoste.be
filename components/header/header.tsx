@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Logo } from '../logo';
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 interface IHeader {
   mobNavActive: boolean;
@@ -12,17 +12,17 @@ export class Header extends Component<{}, IHeader> {
     this.state = { mobNavActive: false };
   }
 
-  toggle = () => {
+  toggle = (): void => {
     this.setState({ mobNavActive: !this.state.mobNavActive });
   };
 
-  render() {
+  render(): JSX.Element {
     const links = [
       { link: '/services', alias: 'diensten', label: 'Diensten' },
       { link: '/about', alias: 'over-mij', label: 'Over mij' },
       { link: '/contact', alias: 'contact', label: 'Contact' }
     ].map(link => (
-      <Link href={link.link} as={link.alias}>
+      <Link href={link.link} as={link.alias} key={link.alias}>
         <li>
           <a className="navbtn trans cursor-pointer">
             <div className="navbtn-label trans">{link.label}</div>

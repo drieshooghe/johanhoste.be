@@ -1,8 +1,8 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Link from 'next/link';
 
 export class NavBar extends Component {
-  render() {
+  render(): JSX.Element {
     return (
       <div className="sm:mt-8 lg:mt-12">
         <nav className="font-menu text-2xl">
