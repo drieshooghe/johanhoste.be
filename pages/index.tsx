@@ -1,3 +1,4 @@
+import '../src/style/style.scss';
 import React from 'react';
 import { NavBar } from '../src/components/navigational/navbar';
 import { Content } from '../content/content';

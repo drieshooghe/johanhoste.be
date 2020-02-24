@@ -1,3 +1,4 @@
+import '../src/style/style.scss';
 import React from 'react';
 import { HeaderTags } from '../src/components/meta/tags';
 import { Content } from "../content/content";
