@@ -1,4 +1,4 @@
-import '../../public/style/main.scss';
+import '../../../public/style/main.scss';
 import React, { Component } from 'react';
 import Head from 'next/head';
 

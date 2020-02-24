@@ -29,3 +29,10 @@
 			}
 	}
 }
+
+.btn {
+	@apply bg-blue p-4 rounded-sm;
+	.btn-label {
+		@apply text-white;
+	}
+}

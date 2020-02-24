@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CookieConsent from 'react-cookie-consent';
-import { Content } from '../../content';
+import { Content } from '../../../content/content';
 import Link from 'next/link';
 
 export class Footer extends Component {
@@ -25,7 +25,7 @@ export class Footer extends Component {
 
             <div className='py-1 w-full md:w-1/3 trans'>
               <Link href='https://www.drieshooghe.com'>
-                <a className='link text-white'>
+                <a className='link text-white' target='_blank' rel='noopener'>
                   Website by:&nbsp;<span className='text-white link__label link__label--dark'>Dries Hooghe</span>
                 </a>
               </Link>
@@ -34,7 +34,7 @@ export class Footer extends Component {
           <CookieConsent location='bottom' buttonText={Content.general.disclaimer.buttonMessage}>
             <div slot='message'>
               <span>{Content.general.disclaimer.message}</span>&nbsp;
-              <a href={Content.general.disclaimer.ctaLink} className='inline'>
+        <a href={Content.general.disclaimer.ctaLink} className='inline'>
                 {Content.general.disclaimer.ctaMessage}
               </a>
             </div>

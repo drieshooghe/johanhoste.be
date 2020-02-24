@@ -13,7 +13,7 @@
     "export": "npm run build && next export && touch ./out/.nojekyll && cp ./CNAME ./out/CNAME",
     "test-export": "node_modules/.bin/serve ./out -p 8080",
     "deploy": "git subtree push --prefix out origin master",
-    "lint": "eslint '{pages,components}/**/*.{js,ts,tsx}' --fix"
+    "lint": "eslint './{pages,src}/**/*.{js,ts,tsx}' --fix"
   },
   "dependencies": {
     "next": "9.1.4",

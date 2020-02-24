@@ -55,7 +55,7 @@ export const Content = {
 			],
 			cta: {
 				message: 'Ik kom uw piano stemmen bij u thuis. U mag mij contacteren via Messenger, mail of het aanvraagformulier van deze website, voor een afspraak indien u dit wenst.',
-				buttonText: 'Stel een vraag',
+				buttonText: 'Stuur een bericht',
 				buttonLink: '/contact'
 			}
 		},
@@ -81,7 +81,7 @@ export const Content = {
 			],
 			cta: {
 				message: 'Heeft u nog vragen?',
-				buttonText: 'Stuur gerust een bericht!',
+				buttonText: 'Stuur een bericht',
 				buttonLink: '/contact'
 			}
 		},
