@@ -94,7 +94,8 @@ export const Content = {
 		},
 		contact: {
 			title: 'Vragen? Neem gerust contact op!',
-			body: ''
+			embeddedMapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5967144073966!2d3.370028415746159!3d50.85715187953355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c33d5cdb153c8f%3A0x11945ba27edf0e54!2sJohan%20Hoste!5e0!3m2!1snl!2sbe!4v1582579915729!5m2!1snl!2sbe',
+			embeddedFormLink: 'https://docs.google.com/forms/d/e/1FAIpQLSf47xonTjrxE1o9-W5rGmTPh3YBkhkd9b0F7uWhqcjEqOsWgQ/viewform?embedded=true'
 		}
 	}
 }
