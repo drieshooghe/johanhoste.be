@@ -7,7 +7,7 @@ export default class TermsAndConditions {
     return (
       <div>
         <Header />
-        <div className="container w-auto scroll-content my-16">
+        <div className='container w-auto scroll-content my-16'>
           <p>Ingangsdatum: November 17, 2018</p>
           <p>
             Johan Hoste (&quot;ons&quot;, &quot;wij&quot; of &quot;onze&quot;) beheert de https://www.johanhoste.be
@@ -201,7 +201,7 @@ export default class TermsAndConditions {
               <p>
                 Voor meer informatie over de privacypraktijken van Google verwijzen wij u naar de internetpagina van
                 Google Privacy en voorwaarden:&nbsp;
-                <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a>
+                <a href='https://policies.google.com/privacy?hl=en'>https://policies.google.com/privacy?hl=en</a>
               </p>
             </li>
           </ul>

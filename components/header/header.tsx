@@ -24,29 +24,29 @@ export class Header extends Component<{}, IHeader> {
     ].map(link => (
       <Link href={link.link} as={link.alias} key={link.alias}>
         <li>
-          <a className="navbtn trans cursor-pointer">
-            <div className="navbtn-label trans">{link.label}</div>
+          <a className='navbtn trans cursor-pointer'>
+            <div className='navbtn-label trans'>{link.label}</div>
           </a>
         </li>
       </Link>
     ));
 
     return (
-      <header className="bg-green font-white font-menu py-3 lg:py-6 scroll-header">
-        <div className="container w-auto flex justify-between">
-          <Link href="/">
-            <a className="py-1">
-              <Logo className="h-12 lg:h-16" />
+      <header className='bg-green font-white font-menu py-3 lg:py-6 scroll-header'>
+        <div className='container w-auto flex justify-between'>
+          <Link href='/'>
+            <a className='py-1'>
+              <Logo className='h-12 lg:h-16' />
             </a>
           </Link>
-          <nav className="flex">
+          <nav className='flex'>
             <button
               className={`z-50 hamburger hamburger--collapse lg:hidden ${this.state.mobNavActive ? 'is-active' : ''}`}
-              type="button"
+              type='button'
               onClick={this.toggle}
             >
-              <span className="hamburger-box">
-                <span className="hamburger-inner"></span>
+              <span className='hamburger-box'>
+                <span className='hamburger-inner'></span>
               </span>
             </button>
             <ul

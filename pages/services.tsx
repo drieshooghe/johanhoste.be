@@ -14,12 +14,12 @@ export default class Services {
       </div>
     ));
     return (
-      <div className="font-sans bg-white w-screen max-w-full">
+      <div className='font-sans bg-white w-screen max-w-full'>
         <HeaderTags />
-        <div className="flex flex-col min-h-screen">
+        <div className='flex flex-col min-h-screen'>
           <Header />
-          <div className="container w-auto scroll-content mt-8 mb-16">
-            <h1 className="mt-4 py-8 text-4xl font-sans">{Content.pages.services.title}</h1>
+          <div className='container w-auto scroll-content mt-8 mb-16'>
+            <h1 className='mt-4 py-8 text-4xl font-sans'>{Content.pages.services.title}</h1>
             {main}
           </div>
           <Footer />
