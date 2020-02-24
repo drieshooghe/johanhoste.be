@@ -1,10 +1,11 @@
-import '../src/style/style.scss';
 import React from 'react';
 import { NavBar } from '../src/components/navigational/navbar';
 import { Content } from '../content/content';
 import { HeaderTags } from '../src/components/meta/tags';
 import { Logo } from '../src/components/logo';
 import { Footer } from '../src/components/footer/footer';
+
+import '../src/style/main.scss';
 
 const HomepageStyle = {
   backgroundImage: 'url(\'img/home-background.jpg\')'

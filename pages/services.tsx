@@ -1,10 +1,11 @@
-import '../src/style/style.scss';
 import React from 'react';
 import { Content } from '../content/content';
 import { HeaderTags } from '../src/components/meta/tags';
 import { Header } from '../src/components/header/header';
 import { Footer } from '../src/components/footer/footer';
 import Parser from 'html-react-parser';
+
+import '../src/style/main.scss';
 
 const servicesBody = Content.pages.services.body.map((block, index) => (
   <div key={index}>

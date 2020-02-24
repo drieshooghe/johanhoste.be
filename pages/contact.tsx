@@ -1,10 +1,11 @@
-import '../src/style/style.scss';
 import React from 'react';
 import { Content } from '../content/content';
 import { HeaderTags } from '../src/components/meta/tags';
 import { Header } from '../src/components/header/header';
 import { Footer } from '../src/components/footer/footer';
 import Link from "next/link";
+
+import '../src/style/main.scss';
 
 export default function ContactPage(): JSX.Element {
   return (

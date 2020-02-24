@@ -1,10 +1,11 @@
-import '../src/style/style.scss';
 import React from 'react';
 import { HeaderTags } from '../src/components/meta/tags';
 import { Content } from "../content/content";
 import { Header } from "../src/components/header/header";
 import { Footer } from "../src/components/footer/footer";
 import Parser from "html-react-parser";
+
+import '../src/style/main.scss';
 
 const aboutBody = Content.pages.about.body.map((block, index) => (
   <div key={index}>

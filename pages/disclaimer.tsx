@@ -1,8 +1,9 @@
-import '../src/style/style.scss';
 import React from 'react';
 import { Header } from '../src/components/header/header';
 import { Footer } from '../src/components/footer/footer';
 import { HeaderTags } from '../src/components/meta/tags';
+
+import '../src/style/main.scss';
 
 export default function DisclaimerPage(): JSX.Element {
   return (
